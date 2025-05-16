@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for NextJS Auth module.
+ */
+
+use Drupal\simple_oauth\Entities\AccessTokenEntity;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_simple_oauth_private_claims_alter().
+ */
+function nextjs_auth_simple_oauth_private_claims_alter(&$private_claims, AccessTokenEntity $access_token_entity) {
+  $user_id = $access_token_entity->getUserIdentifier();
+  /** @var \Drupal\user\UserInterface $user */
+  $user = User::load($user_id);
+
+  $private_claims = [
+    'id' => $user->id(),
+    'email' => $user->getEmail(),
+    'username' => $user->getAccountName(),
+  ];
+}

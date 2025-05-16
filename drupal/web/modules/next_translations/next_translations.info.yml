@@ -1,0 +1,5 @@
+name: Next.js Translations
+type: module
+description: Provides an interface translation tool for Next.js websites.
+package: Custom
+core_version_requirement: ^9 || ^10 || ^11

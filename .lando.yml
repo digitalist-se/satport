@@ -1,0 +1,20 @@
+# name: satport
+# recipe: drupal11
+# config:
+#   php: 8.3
+#   database: 'mariadb:10.6'
+#   webroot: drupal/web
+#   via: nginx
+# env_file:
+#   - lando.env
+# tooling:
+#   drush:
+#     cmd: /app/drupal/vendor/bin/drush
+# services:
+#   database:
+#     type: mariadb:10.6
+
+name: lando-test
+recipe: lamp
+config:
+  webroot: .

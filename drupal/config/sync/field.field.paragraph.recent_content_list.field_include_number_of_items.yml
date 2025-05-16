@@ -1,0 +1,25 @@
+uuid: 95bf843e-e810-4583-91a8-3110fe7de3a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_include_number_of_items
+    - paragraphs.paragraphs_type.recent_content_list
+id: paragraph.recent_content_list.field_include_number_of_items
+field_name: field_include_number_of_items
+entity_type: paragraph
+bundle: recent_content_list
+label: 'Number of items'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 6
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

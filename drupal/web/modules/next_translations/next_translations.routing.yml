@@ -1,0 +1,23 @@
+next_translations.get_translations:
+  path: '/next-translations'
+  defaults:
+    _title: 'Next.js Translations'
+    _controller: '\Drupal\next_translations\Controller\NextTranslationsController::getTranslations'
+  requirements:
+    _access: 'TRUE'
+
+next_translations.admin_translations:
+  path: '/admin/content/next-translations'
+  defaults:
+    _title_callback: 'Drupal\next_translations\Form\TranslateForm::titleCallback'
+    _form: 'Drupal\next_translations\Form\TranslateForm'
+  requirements:
+    _permission: 'translate next_translations'
+
+next_translations.translations_import:
+  path: '/admin/content/next-translations/import'
+  defaults:
+    _title_callback: 'Drupal\next_translations\Form\ImportForm::titleCallback'
+    _form: 'Drupal\next_translations\Form\ImportForm'
+  requirements:
+    _permission: 'administer next_translations'

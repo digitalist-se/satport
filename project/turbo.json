@@ -1,0 +1,28 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "outputs": ["dist/**", "storybook-static/**", ".next/**"],
+      "dependsOn": ["^build"],
+      "env": [
+        "DRUPAL_SITE_ID",
+        "DRUPAL_CLIENT_ID",
+        "DRUPAL_CLIENT_SECRET",
+        "NEXT_PUBLIC_DRUPAL_BASE_URL",
+        "NEXTAUTH_SECRET",
+        "NEXT_PUBLIC_DRUPAL_BASE_URL",
+        "DRUPAL_PREVIEW_SECRET"
+      ]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}

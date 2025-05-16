@@ -1,0 +1,5 @@
+name: NextJS Site Group
+type: module
+description: Provides site based access control
+package: Custom
+core_version_requirement: ^9 || ^10 || ^11

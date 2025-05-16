@@ -1,0 +1,10 @@
+services:
+  next_translations.helper:
+    class: Drupal\next_translations\Helper
+    arguments: ['@language_manager', '@config.factory', '@keyvalue', '@current_user']
+
+  next_translations.event_subscriber:
+    class: Drupal\next_translations\EventSubscriber\EventSubscriber
+    arguments: ['@next_translations.helper']
+    tags:
+      - { name: event_subscriber }

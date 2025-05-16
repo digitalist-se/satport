@@ -1,0 +1,10 @@
+uuid: e75fc750-8d83-47dc-b036-6cd00cd74f84
+langcode: en
+status: true
+dependencies: {  }
+id: recent_content_list
+label: 'Recent content list'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

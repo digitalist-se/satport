@@ -1,0 +1,22 @@
+uuid: d9120193-a0e2-4e9b-b336-7a177a9c48c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_site
+  module:
+    - user
+id: user.user.field_site
+field_name: field_site
+entity_type: user
+bundle: user
+label: Site
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:next_site'
+  handler_settings: {  }
+field_type: entity_reference

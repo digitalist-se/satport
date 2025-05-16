@@ -1,0 +1,7 @@
+administer next_translations:
+  title: 'Administer Next.js translations'
+  description: 'Access to administration and import pages for Next.js translations.'
+
+translate next_translations:
+  title: 'Translate Next.js translations'
+  description: 'Access to translation pages for Next.js translations.'

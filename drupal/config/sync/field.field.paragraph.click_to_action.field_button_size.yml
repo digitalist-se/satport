@@ -1,0 +1,23 @@
+uuid: a6009311-bd8b-4362-8827-10077fa1efe8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_size
+    - paragraphs.paragraphs_type.click_to_action
+  module:
+    - options
+id: paragraph.click_to_action.field_button_size
+field_name: field_button_size
+entity_type: paragraph
+bundle: click_to_action
+label: 'Button size'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: medium
+default_value_callback: ''
+settings: {  }
+field_type: list_string

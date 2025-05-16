@@ -1,0 +1,14 @@
+uuid: c22da419-9003-4b7e-bf79-88172024f210
+langcode: en
+status: true
+dependencies: {  }
+id: node.page
+site_resolver: entity_reference_field
+configuration:
+  field_name: field_site
+  sites:
+    example_site: example_site
+revalidator: path
+revalidator_configuration:
+  revalidate_page: true
+  additional_paths: ''

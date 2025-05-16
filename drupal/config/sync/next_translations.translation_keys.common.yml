@@ -1,0 +1,18 @@
+_core:
+  default_config_hash: 0x7-iGp4Yl5Wp-9IQDkOAr2OfFyrfuYF0ew3JD6o3FI
+translation_keys:
+  - SiteName
+  - SiteDescription
+  - ReadTheDocs
+  - LatestArticlesHeading
+  - NoArticlesFound
+  - ReadArticle
+  - PostedBy
+translation_defaults:
+  SiteName: 'Next.js for Drupal'
+  SiteDescription: 'A Next.js site powered by a Drupal backend.'
+  ReadTheDocs: 'Read the docs'
+  LatestArticlesHeading: 'Latest articles'
+  NoArticlesFound: 'No articles found'
+  ReadArticle: 'Read article'
+  PostedBy: 'Posted by'

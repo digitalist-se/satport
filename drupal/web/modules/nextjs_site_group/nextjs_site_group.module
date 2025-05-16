@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for NextJS Site Group module.
+ */
+
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\NodeInterface;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_node_access().
+ *
+ * Prevent user from editing/deleting content that belongs to another site.
+ */
+function nextjs_site_group_node_access(NodeInterface $node, $op, AccountInterface $account) {
+  if ($account->isAuthenticated() && !$account->hasPermission('access any site content')) {
+    $user = User::load($account->id());
+    if ($node->get('field_site')->entity->id() !== $user->get('field_site')->entity->id()) {
+      return AccessResult::forbidden();
+    }
+  }
+
+  return AccessResult::neutral();
+}

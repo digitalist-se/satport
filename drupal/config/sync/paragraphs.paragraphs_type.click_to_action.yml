@@ -1,0 +1,10 @@
+uuid: 230075e8-60eb-4499-9b01-3dbdacb947c4
+langcode: en
+status: true
+dependencies: {  }
+id: click_to_action
+label: 'Click to action'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

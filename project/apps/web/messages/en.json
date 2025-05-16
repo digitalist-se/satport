@@ -1,0 +1,11 @@
+{
+  "Default": {
+    "SiteName": "Next.js for Drupal",
+    "SiteDescription": "A Next.js site powered by a Drupal backend.",
+    "ReadTheDocs": "Read the docs",
+    "LatestArticlesHeading": "Latest articles",
+    "NoArticlesFound": "No articles found",
+    "ReadArticle": "Read article",
+    "PostedBy": "Posted by"
+  }
+}

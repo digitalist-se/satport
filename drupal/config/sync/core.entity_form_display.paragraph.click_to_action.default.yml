@@ -1,0 +1,32 @@
+uuid: a993bc67-f542-497b-8a19-83ae0b9dd091
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.click_to_action.field_button_size
+    - field.field.paragraph.click_to_action.field_link
+    - paragraphs.paragraphs_type.click_to_action
+  module:
+    - link
+id: paragraph.click_to_action.default
+targetEntityType: paragraph
+bundle: click_to_action
+mode: default
+content:
+  field_button_size:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

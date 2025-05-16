@@ -1,0 +1,10 @@
+uuid: 4a58b6a0-d66f-4b0d-b146-bfb171bbd8d4
+langcode: en
+status: true
+dependencies: {  }
+id: title_and_text
+label: 'Title and Text'
+icon_uuid: null
+icon_default: null
+description: 'A component with title and text'
+behavior_plugins: {  }

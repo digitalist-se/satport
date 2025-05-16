@@ -1,0 +1,11 @@
+uuid: 4df2d74b-cc85-4ca2-ab68-642705021667
+langcode: en
+status: true
+dependencies: {  }
+id: site_2
+label: 'Site 2'
+base_url: 'http://localhost:3001'
+preview_url: 'http://localhost:3001/api/preview'
+preview_secret: secret
+revalidate_url: 'http://host.docker.internal:3001/api/revalidate'
+revalidate_secret: ''

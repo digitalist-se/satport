@@ -1,0 +1,40 @@
+uuid: 45e15190-987e-45e9-b6ba-1469a40d2b54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.recent_content_list.field_content_type
+    - field.field.paragraph.recent_content_list.field_include_number_of_items
+    - field.field.paragraph.recent_content_list.field_included_tags
+    - paragraphs.paragraphs_type.recent_content_list
+id: paragraph.recent_content_list.default
+targetEntityType: paragraph
+bundle: recent_content_list
+mode: default
+content:
+  field_content_type:
+    type: options_buttons
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_include_number_of_items:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_included_tags:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

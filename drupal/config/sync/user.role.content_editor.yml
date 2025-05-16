@@ -1,0 +1,81 @@
+uuid: 27b790e9-f379-4243-bf91-59e6d7729009
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - node.type.article
+    - node.type.page
+    - taxonomy.vocabulary.tags
+    - workflows.workflow.default
+  module:
+    - content_moderation
+    - content_translation
+    - contextual
+    - file
+    - filter
+    - node
+    - paragraphs
+    - path
+    - subrequests
+    - system
+    - taxonomy
+    - toolbar
+_core:
+  default_config_hash: Wur9kcEOwY1Jal81NssKnz3RhVJxAvBwyWQBGcA_1Go
+id: content_editor
+label: 'Content editor'
+weight: 2
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer taxonomy'
+  - 'administer url aliases'
+  - 'create article content'
+  - 'create content translations'
+  - 'create page content'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'delete all revisions'
+  - 'delete any article content'
+  - 'delete any page content'
+  - 'delete article revisions'
+  - 'delete content translations'
+  - 'delete own article content'
+  - 'delete own page content'
+  - 'delete page revisions'
+  - 'delete terms in tags'
+  - 'edit any article content'
+  - 'edit any page content'
+  - 'edit own article content'
+  - 'edit own page content'
+  - 'edit terms in tags'
+  - 'issue subrequests'
+  - 'revert all revisions'
+  - 'revert article revisions'
+  - 'revert page revisions'
+  - 'translate any entity'
+  - 'translate article node'
+  - 'translate editable entities'
+  - 'translate page node'
+  - 'translate paragraph'
+  - 'update content translations'
+  - 'use default transition create_new_draft'
+  - 'use default transition publish'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view article revisions'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view the administration theme'
+  - 'view unpublished paragraphs'

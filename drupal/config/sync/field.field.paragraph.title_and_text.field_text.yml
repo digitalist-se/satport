@@ -1,0 +1,22 @@
+uuid: ea2336bb-adb9-438b-b075-452bc40af249
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.title_and_text
+  module:
+    - text
+id: paragraph.title_and_text.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: title_and_text
+label: Text
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,11 @@
+uuid: decd973c-d384-4b73-ae33-eec16e7242fd
+langcode: en
+status: true
+dependencies: {  }
+id: example_site
+label: 'Site 1'
+base_url: 'http://localhost:3000'
+preview_url: 'http://localhost:3000/api/preview'
+preview_secret: secret
+revalidate_url: 'http://localhost:3000/api/revalidate'
+revalidate_secret: revalidate-secret

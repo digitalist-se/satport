@@ -1,0 +1,4 @@
+{
+  "extends": "@dg/eslint-config/next.js",
+  "root": true
+}
