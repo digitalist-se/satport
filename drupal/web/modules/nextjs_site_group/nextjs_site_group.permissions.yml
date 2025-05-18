@@ -1,4 +1,0 @@
-access any site content:
-  title: 'Access any NextJS site content'
-  description: 'Allow user to access any NextJS site content.'
-  restrict access: true
