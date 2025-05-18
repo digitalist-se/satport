@@ -7,7 +7,7 @@ Note: This project was created and built using Fedora 42. Instructions bellow ha
 - Install docker ce from the official docker site. Don't use the dnf or yum version provided in linux. Example, for Fedora, see https://docs.docker.com/engine/install/fedora/
 - Add user to the docker usergroup to allow access to docker without sudo permissions
 ```sh
-$ sudo usermod -aG docker
+$ sudo usermod -aG docker username
 ```
 - Install php and composer from dnf
 ```sh
@@ -19,7 +19,7 @@ $ sudo dnf install composer
 $ sudo dnf install php-gd
 ```
 - Run composer install
-- Then run commands
+- Then run commands to configure the project for platform sh usage
 ```sh
 $ composer require platformsh/config-reader drush/drush drupal/redis
 $ composer config allow-plugins.composer/installers true --no-plugins
@@ -27,7 +27,8 @@ $ composer config allow-plugins.drupal/core-composer-scaffold true --no-plugins
 $ composer config allow-plugins.drupal/core-project-message true --no-plugins
 $ composer config allow-plugins.cweagans/composer-patches true --no-plugins
 ```
-- Lando start or rebuild
+- Start the project using command ```$ lando start```
+- If there are changes to .lando.yml or .platform.app.yml, rebuild the project using command ```$ lando rebuild```
 - Install drupal site with command or go to the site and install from there. Make sure db url is properly specified or else it will say it cant connect to DB
 - If the DB is not accessible, add flag --db-url=mysql://drupal11:drupal11@database/drupal11 to the commands. Example, to start the site with db specified, use command
 ```sh
