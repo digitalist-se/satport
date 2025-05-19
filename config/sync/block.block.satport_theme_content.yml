@@ -1,0 +1,22 @@
+uuid: bccb0af9-a4b2-4707-b8b4-f803d8d54ee0
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - satport_theme
+_core:
+  default_config_hash: a0Yyx1GeyKarZ4T_yXQBR_ZFKnXiFLtxAb6gWLd8nr0
+id: satport_theme_content
+theme: satport_theme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -5,6 +5,7 @@ module:
   breakpoint: 0
   dblog: 0
   dynamic_page_cache: 0
+  entity_reference_revisions: 0
   field: 0
   field_ui: 0
   file: 0
@@ -23,13 +24,18 @@ module:
   system: 0
   telephone: 0
   text: 0
+  token: 0
   toolbar: 0
   update: 0
   user: 0
   views_ui: 0
+  pathauto: 1
   views: 10
+  paragraphs: 11
   minimal: 1000
 theme:
   stark: 0
   claro: 0
+  stable9: 0
+  satport_theme: 0
 profile: minimal

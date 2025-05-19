@@ -1,0 +1,17 @@
+global:
+  css:
+    theme:
+      dist/css/style.css: { media: screen }
+  js:
+    js/main.js: {}
+  dependencies:
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/once
+fonts:
+  css:
+    theme:
+      # Example to add external style, e.g. font css from google fonts
+      # '//fonts.googleapis.com/css?family=Kaushan+Script': { type: external, minified: true }

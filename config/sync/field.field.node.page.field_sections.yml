@@ -1,0 +1,31 @@
+uuid: bfede380-852c-4046-b11b-8b0d34de33b7
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sections
+    - node.type.page
+    - paragraphs.paragraphs_type.hero
+  module:
+    - entity_reference_revisions
+id: node.page.field_sections
+field_name: field_sections
+entity_type: node
+bundle: page
+label: Sections
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      hero: hero
+    negate: 0
+    target_bundles_drag_drop:
+      hero:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

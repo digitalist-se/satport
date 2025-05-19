@@ -1,0 +1,14 @@
+uuid: b26aa389-45c2-40db-a30a-a88a483e71ab
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+id: node
+label: Node
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

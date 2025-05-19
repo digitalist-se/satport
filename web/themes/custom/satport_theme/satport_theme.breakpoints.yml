@@ -1,0 +1,24 @@
+d10theme.mobile:
+  label: mobile
+  mediaQuery: ""
+  weight: 0
+  multipliers:
+    - 1x
+d10theme.mobile_landscape:
+  label: mobile_landscape
+  mediaQuery: "all and (min-width: 480px) and (max-width: 767px)"
+  weight: 1
+  multipliers:
+    - 1x
+d10theme.tablet:
+  label: tablet
+  mediaQuery: "all and (min-width: 768px) and (max-width: 1023px)"
+  weight: 2
+  multipliers:
+    - 1x
+d10theme.desktop:
+  label: desktop
+  mediaQuery: "all and (min-width: 1024px)"
+  weight: 3
+  multipliers:
+    - 1x

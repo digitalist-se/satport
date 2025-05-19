@@ -1,0 +1,20 @@
+{
+  "name": "satport_theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss src/css/main.css -o dist/css/style.css",
+    "dev": "chokidar 'src/css/**/*.css' -c 'npm run build'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.0",
+    "postcss-preset-env": "^10.1.6"
+  }
+}

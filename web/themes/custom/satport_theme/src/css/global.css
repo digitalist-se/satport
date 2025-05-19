@@ -1,0 +1,24 @@
+:root {
+  --color-space-gray: #3f4752;
+  --color-sky-blue: #63aeff;
+  --color-sky-blue-light: #a9dbff;
+  --color-dawn-yellow: #ffffa8;
+  --color-earth-gray-light: #fafaf5;
+  --color-earth-gray: #e9e6e1;
+  --color-earth-brown: #ab9079;
+
+  --font-primary: "Aptos", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  &.scroll-lock {
+    overflow: hidden;
+  }
+}
+
+body {
+}
