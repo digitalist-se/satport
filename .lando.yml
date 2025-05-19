@@ -8,3 +8,5 @@ config:
 services:
   rediscache:
     type: redis:7
+env_file:
+  - .lando.env
