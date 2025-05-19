@@ -4,8 +4,7 @@ description: "SatPort drupal theme"
 core_version_requirement: ">=9.2"
 base theme: stable9
 libraries:
-  - d10theme/global
-  - d10theme/fonts
+  - satport_theme/global
 regions:
   header: "Header"
   content: "Content"

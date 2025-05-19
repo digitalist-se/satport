@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Aptos';
+    src: url('Aptos.woff2') format('woff2'),
+        url('Aptos.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aptos';
+    src: url('Aptos-Light.woff2') format('woff2'),
+        url('Aptos-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aptos Display';
+    src: url('AptosDisplay-Bold.woff2') format('woff2'),
+        url('AptosDisplay-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

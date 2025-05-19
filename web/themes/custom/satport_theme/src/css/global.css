@@ -7,7 +7,8 @@
   --color-earth-gray: #e9e6e1;
   --color-earth-brown: #ab9079;
 
-  --font-primary: "Aptos", Arial, sans-serif;
+  --font-primary: "Aptos", "Segoe UI", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
 }
 
 * {
@@ -21,4 +22,41 @@ html {
 }
 
 body {
+  font-family: var(--font-primary);
+  line-height: 1.375;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: 300;
+  margin: 0 0 1em 0;
+  line-height: 1;
+  font-size: 18px;
+}
+
+img,
+figure,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input[type="submit"] {
+  font-family: var(--font-primary);
 }

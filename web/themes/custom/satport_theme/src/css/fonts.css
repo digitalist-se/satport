@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Aptos";
+  src: url("/themes/custom/satport_theme/assets/fonts/aptos/Aptos.woff2")
+      format("woff2"),
+    url("/themes/custom/satport_theme/assets/fonts/aptos/Aptos.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Aptos";
+  src: url("/themes/custom/satport_theme/assets/fonts/aptos/Aptos-Light.woff2")
+      format("woff2"),
+    url("/themes/custom/satport_theme/assets/fonts/aptos/Aptos-Light.woff")
+      format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Aptos Display";
+  src: url("/themes/custom/satport_theme/assets/fonts/aptos/AptosDisplay-Bold.woff2")
+      format("woff2"),
+    url("/themes/custom/satport_theme/assets/fonts/aptos/AptosDisplay-Bold.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: block;
+}

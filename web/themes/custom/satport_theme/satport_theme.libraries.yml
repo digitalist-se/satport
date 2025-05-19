@@ -10,8 +10,3 @@ global:
     - core/drupalSettings
     - core/jquery
     - core/once
-fonts:
-  css:
-    theme:
-      # Example to add external style, e.g. font css from google fonts
-      # '//fonts.googleapis.com/css?family=Kaushan+Script': { type: external, minified: true }
