@@ -2,7 +2,7 @@
 
 # A unique name for the app. Must be lowercase alphanumeric characters. Changing the name destroys data associated
 # with the app.
-name: 'satport'
+name: 'drupal'
 
 # The runtime the application uses.
 # Complete list of available runtimes: https://docs.platform.sh/create-apps/app-reference.html#types
@@ -198,21 +198,3 @@ runtime:
         - sodium
         - apcu
         - blackfire
-
-# More information: https://docs.platform.sh/create-apps/app-reference.html#additional-hosts
-# additional_hosts:
-
-########################################################################################################################
-##                                                                                                                    ##
-## This source operation is part of the Platform.sh process of updating and maintaining our collection of templates.  ##
-## For more information see https://docs.platform.sh/create-apps/source-operations.html and                           ##
-## https://github.com/platformsh/source-operations                                                                    ##
-##                                                                                                                    ##
-##                  YOU CAN SAFELY DELETE THIS COMMENT AND THE LINES BENEATH IT                                       ##
-##                                                                                                                    ##
-########################################################################################################################
-source:
-  operations:
-    auto-update:
-      command: |
-        curl -fsS https://raw.githubusercontent.com/platformsh/source-operations/main/setup.sh | { bash /dev/fd/3 sop-autoupdate; } 3<&0

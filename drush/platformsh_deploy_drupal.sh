@@ -5,6 +5,8 @@
 # @todo expand further to pass --uri for all sites, with an eye towards multisite
 #
 
+# Add vendor/bin to PATH so 'drush' is recognized
+export PATH="/app/vendor/bin:$PATH"
 
 if [ -n "$(drush status --field=bootstrap)" ]; then
   drush -y cache-rebuild
