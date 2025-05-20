@@ -7,6 +7,7 @@
   --color-earth-gray: #e9e6e1;
   --color-earth-brown: #ab9079;
   --color-border: #464646;
+  --color-line: #414141;
 
   --font-primary: "Aptos", "Segoe UI", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
@@ -39,6 +40,10 @@ a {
 
 p {
   margin: 0 0 1em;
+  font-size: 16px;
+  @media (width >= 768px) {
+    font-size: 18px;
+  }
 }
 
 h1,
@@ -49,7 +54,7 @@ h5,
 h6 {
   font-family: var(--font-primary);
   font-weight: 300;
-  margin: 0 0 1em 0;
+  margin: 0 0 0.8em 0;
   line-height: 1;
   font-size: 18px;
   letter-spacing: -0.02em;
@@ -57,10 +62,16 @@ h6 {
 
 h1 {
   font-size: 32px;
+  @media (width >= 768px) {
+    font-size: 60px;
+  }
 }
 
 h2 {
   font-size: 30px;
+  @media (width >= 768px) {
+    font-size: 48px;
+  }
 }
 
 h3 {
@@ -122,5 +133,14 @@ button,
     &:active {
       background: #ffffe4;
     }
+  }
+}
+
+.container {
+  padding: 0 14px;
+  @media (width >= 1024px) {
+    padding: 0 28px;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }

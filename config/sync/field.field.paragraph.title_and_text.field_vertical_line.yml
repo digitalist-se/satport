@@ -1,0 +1,23 @@
+uuid: 98cbce7a-9e1d-4b9d-9a3c-2ddcc168a09a
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vertical_line
+    - paragraphs.paragraphs_type.title_and_text
+  module:
+    - options
+id: paragraph.title_and_text.field_vertical_line
+field_name: field_vertical_line
+entity_type: paragraph
+bundle: title_and_text
+label: 'Vertical lines'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: under_lines
+default_value_callback: ''
+settings: {  }
+field_type: list_string

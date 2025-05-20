@@ -27,13 +27,13 @@ content:
     type: image_url
     label: hidden
     settings:
-      image_style: image_w_3840_scale
+      image_style: image_w_1400_scale
     third_party_settings: {  }
     weight: 0
     region: content
   field_text:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

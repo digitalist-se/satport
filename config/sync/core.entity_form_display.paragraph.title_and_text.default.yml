@@ -1,0 +1,57 @@
+uuid: 594c6a33-1c97-437c-92e5-4123ad47aad5
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.title_and_text.field_background_color
+    - field.field.paragraph.title_and_text.field_long_text
+    - field.field.paragraph.title_and_text.field_tag
+    - field.field.paragraph.title_and_text.field_title
+    - field.field.paragraph.title_and_text.field_vertical_line
+    - paragraphs.paragraphs_type.title_and_text
+  module:
+    - text
+id: paragraph.title_and_text.default
+targetEntityType: paragraph
+bundle: title_and_text
+mode: default
+content:
+  field_background_color:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_long_text:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_tag:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_vertical_line:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

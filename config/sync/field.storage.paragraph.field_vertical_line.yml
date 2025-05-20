@@ -1,0 +1,30 @@
+uuid: 0bcc5d16-a7c1-4e3f-a5e1-98d5a99534dd
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_vertical_line
+field_name: field_vertical_line
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: over_lines
+      label: 'Over lines'
+    -
+      value: over_center_line
+      label: 'Over center line'
+    -
+      value: under_lines
+      label: 'Under lines'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

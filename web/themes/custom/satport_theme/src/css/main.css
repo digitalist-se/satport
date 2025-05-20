@@ -2,4 +2,6 @@
 @import "./global.css";
 @import "./layout/header.css";
 @import "./layout/page.css";
-@import "./content/hero.css";
+@import "./content/node-page.css";
+@import "./content/section-hero.css";
+@import "./content/section-title-and-text.css";

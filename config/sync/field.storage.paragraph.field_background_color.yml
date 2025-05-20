@@ -1,0 +1,36 @@
+uuid: 8b2057fd-9687-46f1-b0e6-6fb8e777bdde
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: white
+      label: WHITE
+    -
+      value: dawn_yellow
+      label: 'DAWN YELLOW'
+    -
+      value: earth_gray
+      label: 'EARTH GRAY'
+    -
+      value: sky_blue_light
+      label: 'SKY BLUE LIGHT'
+    -
+      value: earth_brown
+      label: 'EARTH BROWN'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

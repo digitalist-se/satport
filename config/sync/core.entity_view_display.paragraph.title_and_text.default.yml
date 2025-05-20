@@ -1,0 +1,57 @@
+uuid: 277adecd-b7b0-45cb-9224-637fa05da32c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.title_and_text.field_background_color
+    - field.field.paragraph.title_and_text.field_long_text
+    - field.field.paragraph.title_and_text.field_tag
+    - field.field.paragraph.title_and_text.field_title
+    - field.field.paragraph.title_and_text.field_vertical_line
+    - paragraphs.paragraphs_type.title_and_text
+  module:
+    - options
+    - text
+id: paragraph.title_and_text.default
+targetEntityType: paragraph
+bundle: title_and_text
+mode: default
+content:
+  field_background_color:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_long_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_tag:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_vertical_line:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden: {  }

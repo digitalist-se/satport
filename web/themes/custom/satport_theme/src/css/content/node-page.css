@@ -1,0 +1,40 @@
+.node--type-page {
+  position: relative;
+}
+
+.vertical-line-left,
+.vertical-line-center,
+.vertical-line-right {
+  @media (width < 1024px) {
+    display: none;
+  }
+  position: absolute;
+
+  width: 1px;
+  background: var(--color-line);
+  height: calc(100% - 29px);
+  top: 29px;
+}
+
+.vertical-line-left {
+  z-index: 2;
+  left: 14px;
+  @media (width >= 1440px) {
+    left: 50%;
+    transform: translateX(-706px);
+  }
+}
+
+.vertical-line-center {
+  z-index: 1;
+  left: 50%;
+}
+
+.vertical-line-right {
+  z-index: 2;
+  right: 14px;
+  @media (width >= 1440px) {
+    right: 50%;
+    transform: translateX(706px);
+  }
+}
