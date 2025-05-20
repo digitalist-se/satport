@@ -140,7 +140,10 @@ web:
 # access:
 
 # Variables to control the environment. More information: https://docs.platform.sh/create-apps/app-reference.html#variables
-#variables:
+variables:
+    env:
+        ENV: platformsh
+        SATPORT_THEME_PATH: web/themes/custom/satport_theme
 
 # Outbound firewall rules for the application. More information: https://docs.platform.sh/create-apps/app-reference.html#firewall
 # firewall:
@@ -155,7 +158,9 @@ web:
 dependencies:
     php:
         composer/composer: "^2.7.0"
-
+    nodejs:
+        nodejs: "22"
+    
 # Hooks allow you to customize your code/environment as the project moves through the build and deploy stages
 # More information: https://docs.platform.sh/create-apps/app-reference.html#hooks
 hooks:
@@ -163,6 +168,11 @@ hooks:
     # No services are available but the disk is writeable.
     build: |
         set -e
+
+        # Build frontend
+        cd $PLATFORM_APP_DIR/$SATPORT_THEME_PATH
+        npm install
+        npm run build
     # The deploy hook runs after your application has been deployed and started.
     # Code cannot be modified at this point but the database is available.
     # The site is not accepting requests while this script runs so keep it
