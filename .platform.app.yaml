@@ -142,6 +142,7 @@ web:
 # Variables to control the environment. More information: https://docs.platform.sh/create-apps/app-reference.html#variables
 variables:
     env:
+        N_PREFIX: /app/.global
         ENV: platformsh
         SATPORT_THEME_PATH: web/themes/custom/satport_theme
 
@@ -159,7 +160,7 @@ dependencies:
     php:
         composer/composer: "^2.7.0"
     nodejs:
-        nodejs: "22"
+        n: "*"
     
 # Hooks allow you to customize your code/environment as the project moves through the build and deploy stages
 # More information: https://docs.platform.sh/create-apps/app-reference.html#hooks
@@ -167,7 +168,14 @@ hooks:
     # The build hook runs after Composer to finish preparing up your code.
     # No services are available but the disk is writeable.
     build: |
+        # Exit the hook on any failure
         set -e
+
+        # Install the version specified in the .nvmrc file
+        n auto
+
+        # Reset the location hash to recognize the newly installed version
+        hash -r  
 
         # Build frontend
         cd $PLATFORM_APP_DIR/$SATPORT_THEME_PATH
