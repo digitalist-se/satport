@@ -67,14 +67,39 @@ input[type="submit"] {
   font-family: var(--font-primary);
 }
 
-button {
+button,
+.button {
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-button.reset {
+.button.reset {
   margin: 0;
   padding: 0;
   border: 0;
   border-radius: 0;
   background: none;
+}
+
+.button.cta {
+  border-radius: 20px;
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+  padding: 8px 24px;
+
+  &.white {
+    background: #fff;
+    color: #000;
+
+    &:hover {
+      background: var(--color-dawn-yellow);
+    }
+
+    &:active {
+      background: #ffffe4;
+    }
+  }
 }
