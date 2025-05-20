@@ -1,17 +1,17 @@
-uuid: 9b2d262c-4f1f-4f22-8d4e-a4ba07766b24
+uuid: df207f9e-2e86-4304-adc9-53302ff6c871
 langcode: en-gb
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_image
+    - field.storage.paragraph.field_image_mobile
     - paragraphs.paragraphs_type.hero
   module:
     - image
-id: paragraph.hero.field_image
-field_name: field_image
+id: paragraph.hero.field_image_mobile
+field_name: field_image_mobile
 entity_type: paragraph
 bundle: hero
-label: Image
+label: 'Image Mobile'
 description: ''
 required: true
 translatable: false

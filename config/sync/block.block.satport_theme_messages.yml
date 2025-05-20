@@ -10,8 +10,8 @@ _core:
   default_config_hash: '-Ac3ISpIT0PQ-whzD7_dw0SdKi6dAbRFNWdSjOiVDqg'
 id: satport_theme_messages
 theme: satport_theme
-region: header
-weight: 0
+region: content
+weight: -2
 provider: null
 plugin: system_messages_block
 settings:

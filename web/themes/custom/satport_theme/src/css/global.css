@@ -6,6 +6,7 @@
   --color-earth-gray-light: #fafaf5;
   --color-earth-gray: #e9e6e1;
   --color-earth-brown: #ab9079;
+  --color-border: #464646;
 
   --font-primary: "Aptos", "Segoe UI", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
@@ -16,12 +17,17 @@
 }
 
 html {
+  margin: 0;
+  padding: 0;
+
   &.scroll-lock {
     overflow: hidden;
   }
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: var(--font-primary);
   line-height: 1.375;
 }
@@ -59,4 +65,16 @@ svg {
 button,
 input[type="submit"] {
   font-family: var(--font-primary);
+}
+
+button {
+  cursor: pointer;
+}
+
+button.reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
 }

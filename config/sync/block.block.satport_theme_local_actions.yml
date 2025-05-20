@@ -9,7 +9,7 @@ _core:
 id: satport_theme_local_actions
 theme: satport_theme
 region: content
-weight: -10
+weight: 1
 provider: null
 plugin: local_actions_block
 settings:

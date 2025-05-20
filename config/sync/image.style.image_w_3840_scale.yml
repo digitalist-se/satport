@@ -1,0 +1,15 @@
+uuid: 9b1e03fa-d8c8-487b-afac-787491fc44ec
+langcode: en-gb
+status: true
+dependencies: {  }
+name: image_w_3840_scale
+label: image_w_3840_scale
+effects:
+  b70af245-009d-4c7e-a364-3727ed91c34f:
+    uuid: b70af245-009d-4c7e-a364-3727ed91c34f
+    id: image_scale
+    weight: 1
+    data:
+      width: 3840
+      height: null
+      upscale: false

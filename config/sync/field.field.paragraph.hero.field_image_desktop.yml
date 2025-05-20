@@ -1,0 +1,38 @@
+uuid: 2a91ce0f-401a-47c6-903b-a661ad144858
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_desktop
+    - paragraphs.paragraphs_type.hero
+  module:
+    - image
+id: paragraph.hero.field_image_desktop
+field_name: field_image_desktop
+entity_type: paragraph
+bundle: hero
+label: 'Image Desktop'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

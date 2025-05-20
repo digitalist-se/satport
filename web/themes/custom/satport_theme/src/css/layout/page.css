@@ -1,0 +1,6 @@
+.page-main {
+  padding-top: 92px;
+  @media (width >=1024px) {
+    padding: 0;
+  }
+}

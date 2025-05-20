@@ -3,7 +3,9 @@ langcode: en-gb
 status: true
 dependencies:
   config:
-    - field.field.paragraph.hero.field_image
+    - field.field.paragraph.hero.field_image_desktop
+    - field.field.paragraph.hero.field_image_mobile
+    - field.field.paragraph.hero.field_text
     - field.field.paragraph.hero.field_title
     - paragraphs.paragraphs_type.hero
   module:
@@ -13,16 +15,29 @@ targetEntityType: paragraph
 bundle: hero
 mode: default
 content:
-  field_image:
-    type: image
+  field_image_desktop:
+    type: image_url
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
+      image_style: image_w_3840_scale
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image_mobile:
+    type: image_url
+    label: hidden
+    settings:
+      image_style: image_w_3840_scale
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_title:
     type: string
@@ -30,6 +45,6 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
 hidden: {  }

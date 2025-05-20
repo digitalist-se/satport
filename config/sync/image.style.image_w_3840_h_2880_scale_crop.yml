@@ -1,0 +1,15 @@
+uuid: 88e37f9b-9b4d-4092-ac37-0321b172b2cd
+langcode: en-gb
+status: true
+dependencies: {  }
+name: image_w_3840_h_2880_scale_crop
+label: image_w_3840_h_2880_scale_crop
+effects:
+  07a975d8-5395-4f6a-adaf-2b5538708ce9:
+    uuid: 07a975d8-5395-4f6a-adaf-2b5538708ce9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 3840
+      height: 2880
+      anchor: center-center
