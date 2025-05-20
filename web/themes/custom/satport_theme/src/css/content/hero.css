@@ -1,6 +1,9 @@
 .paragraph--type--hero {
-  min-height: 100vh;
+  height: calc(100vh - 92px);
   position: relative;
+  @media (width >= 1024px) {
+    height: 100vh;
+  }
 
   .hero-image-wrapper {
     img {
@@ -16,17 +19,53 @@
   .hero-content-wrapper {
     display: flex;
     align-items: center;
-    min-height: 100vh;
-    position: relative;
+    position: absolute;
+    inset: 0;
     z-index: 1;
-    padding: 106px 14px 14px;
-    @media (width >=1024px) {
+    padding: 28px 14px;
+    @media (width >= 1024px) {
       max-width: 1440px;
       margin: 0 auto;
-      padding: 100px 28px 28px;
+      padding: 100px 28px;
     }
   }
 
   .hero-content-inner {
+    width: 66%;
+    @media (width >= 768px) {
+      width: 100%;
+      max-width: 380px;
+    }
+    @media (width >= 1024px) {
+      max-width: 420px;
+    }
+    @media (width >= 1280px) {
+      max-width: 600px;
+    }
+  }
+
+  .hero-title {
+    font-size: 32px;
+    margin-bottom: 16px;
+    @media (width >= 375px) {
+      font-size: 38px;
+    }
+    @media (width >= 1024px) {
+      font-size: 42px;
+    }
+    @media (width >= 1280px) {
+      font-size: 60px;
+    }
+  }
+
+  .hero-text {
+    margin: 0;
+    font-size: 16px;
+    @media (width >= 375px) {
+      font-size: 18px;
+    }
+    @media (width >= 1024px) {
+      font-size: 22px;
+    }
   }
 }

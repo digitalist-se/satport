@@ -5,6 +5,7 @@
       const mainMenuFixed = document.getElementById("mobile-menu-fixed");
       const mainMenuScroll = document.getElementById("mobile-menu-scroll");
       const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+      const heroSections = document.querySelectorAll(".paragraph--type--hero");
 
       mobileMenuToggle.addEventListener("click", () => {
         mainMenuFixed.classList.toggle("open");
@@ -23,6 +24,16 @@
           mobileMenuToggle.classList.remove("open");
           document.documentElement.classList.remove("scroll-lock");
         }
+
+        // Hero: Set min-height to be window height
+        heroSections.forEach(function (heroSection) {
+          if (window.innerWidth >= 1024) {
+            heroSection.style.height = window.innerHeight + "px";
+          } else {
+            heroSection.style.height =
+              window.innerHeight - pageHeader.clientHeight + "px";
+          }
+        });
       }
 
       // Attach the event listener

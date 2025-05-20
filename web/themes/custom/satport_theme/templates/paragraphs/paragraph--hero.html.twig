@@ -48,13 +48,20 @@
 %}
 <div{{ attributes.addClass(classes) }}>
   <div class="hero-image-wrapper">
-    <img src="{{ content.field_image_desktop.0 }}" alt="" />
-    {# {{ content.field_image_mobile.0 }} #}
+    {# <img src="{{ content.field_image_desktop.0 }}" alt="" /> #}
+    <picture>
+      <source srcset="{{ content.field_image_desktop.0 }}" media="(min-width: 1024px)" />
+      <img src="{{ content.field_image_mobile.0 }}" alt="" />
+    </picture>
   </div>
   <div class="hero-content-wrapper">
     <div class="hero-content-inner">
-      {{ content.field_title }}
-      {{ content.field_text }}
+      {% if content.field_title %}
+        <h2 class="hero-title">{{ content.field_title.0 }}</h2>
+      {% endif %}
+      {% if content.field_text %}
+        <p class="hero-text">{{ content.field_text.0 }}</p>
+      {% endif %}
     </div>
   </div>
 </div>
