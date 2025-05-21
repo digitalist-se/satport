@@ -44,6 +44,16 @@ p {
   @media (width >= 768px) {
     font-size: 18px;
   }
+  @media (width >= 1024px) {
+    font-size: 1.25vw;
+  }
+}
+
+ul,
+ol {
+  @media (width >= 1024px) {
+    font-size: 1.25vw;
+  }
 }
 
 h1,
@@ -139,8 +149,8 @@ button,
 .container {
   padding: 0 14px;
   @media (width >= 1024px) {
-    padding: 0 28px;
-    max-width: 1440px;
-    margin: 0 auto;
+    padding: 0 2vw;
+    /* max-width: 1440px;
+    margin: 0 auto; */
   }
 }

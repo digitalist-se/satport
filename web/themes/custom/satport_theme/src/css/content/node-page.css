@@ -12,16 +12,16 @@
 
   width: 1px;
   background: var(--color-line);
-  height: calc(100% - 29px);
-  top: 29px;
+  height: calc(100% - 28px);
+  top: 28px;
 }
 
 .vertical-line-left {
   z-index: 2;
-  left: 14px;
+  left: 1vw;
   @media (width >= 1440px) {
-    left: 50%;
-    transform: translateX(-706px);
+    /* left: 50%;
+    transform: translateX(-706px); */
   }
 }
 
@@ -32,9 +32,9 @@
 
 .vertical-line-right {
   z-index: 2;
-  right: 14px;
+  right: 1vw;
   @media (width >= 1440px) {
-    right: 50%;
-    transform: translateX(706px);
+    /* right: 50%;
+    transform: translateX(706px); */
   }
 }

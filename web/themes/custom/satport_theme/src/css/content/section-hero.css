@@ -24,8 +24,8 @@
     z-index: 1;
     padding: 28px 14px;
     @media (width >= 1024px) {
-      max-width: 1440px;
-      margin: 0 auto;
+      /* max-width: 1440px;
+      margin: 0 auto; */
       padding: 100px 28px;
     }
   }
@@ -37,10 +37,12 @@
       max-width: 380px;
     }
     @media (width >= 1024px) {
-      max-width: 420px;
+      /* max-width: 420px; */
+
+      max-width: 40vw;
     }
     @media (width >= 1280px) {
-      max-width: 600px;
+      /* max-width: 600px; */
     }
   }
 
@@ -51,10 +53,11 @@
       font-size: 38px;
     }
     @media (width >= 1024px) {
-      font-size: 42px;
+      /* font-size: 42px; */
+      font-size: 4.2vw;
     }
     @media (width >= 1280px) {
-      font-size: 60px;
+      /* font-size: 60px; */
     }
   }
 
@@ -65,7 +68,8 @@
       font-size: 18px;
     }
     @media (width >= 1024px) {
-      font-size: 22px;
+      /* font-size: 22px; */
+      font-size: 1.5vw;
     }
   }
 }
