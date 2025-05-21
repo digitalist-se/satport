@@ -49,10 +49,12 @@ p {
   }
 }
 
-ul,
-ol {
-  @media (width >= 1024px) {
-    font-size: 1.25vw;
+.page-container {
+  ul,
+  ol {
+    @media (width >= 1024px) {
+      font-size: 1.25vw;
+    }
   }
 }
 

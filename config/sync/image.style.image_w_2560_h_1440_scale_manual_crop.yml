@@ -1,0 +1,26 @@
+uuid: 8b66442d-0971-450d-a72f-1bc64f56fb67
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - crop.type.full_width_image_desktop
+  module:
+    - crop
+name: image_w_2560_h_1440_scale_manual_crop
+label: image_w_2560_h_1440_scale_manual_crop
+effects:
+  685c6a1f-beb5-453d-8e3f-9570766e2bcf:
+    uuid: 685c6a1f-beb5-453d-8e3f-9570766e2bcf
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: full_width_image_desktop
+      automatic_crop_provider: null
+  fa5916bf-31e6-431e-b298-3d11a984391d:
+    uuid: fa5916bf-31e6-431e-b298-3d11a984391d
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 2560
+      height: 1440
+      anchor: center-center

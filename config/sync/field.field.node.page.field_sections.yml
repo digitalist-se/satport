@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_sections
     - node.type.page
+    - paragraphs.paragraphs_type.full_width_image
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.title_and_text
   module:
@@ -25,8 +26,12 @@ settings:
     target_bundles:
       hero: hero
       title_and_text: title_and_text
+      full_width_image: full_width_image
     negate: 0
     target_bundles_drag_drop:
+      full_width_image:
+        weight: 4
+        enabled: true
       hero:
         weight: 2
         enabled: true

@@ -5,6 +5,7 @@ module:
   block: 0
   breakpoint: 0
   ckeditor5: 0
+  crop: 0
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
@@ -12,8 +13,11 @@ module:
   field: 0
   field_ui: 0
   file: 0
+  file_mdm: 0
   filter: 0
   image: 0
+  image_widget_crop: 0
+  imagemagick: 0
   language: 0
   link: 0
   locale: 0
@@ -24,11 +28,13 @@ module:
   path: 0
   path_alias: 0
   responsive_image: 0
+  sophron: 0
   system: 0
   telephone: 0
   text: 0
   token: 0
   toolbar: 0
+  twig_tweak: 0
   update: 0
   user: 0
   views_ui: 0

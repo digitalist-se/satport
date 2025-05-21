@@ -1,0 +1,11 @@
+.paragraph--type--full-width-image {
+  /* height: 125vw; */
+  height: 60vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  @media (width >= 1024px) {
+    height: 80vh;
+  }
+}
