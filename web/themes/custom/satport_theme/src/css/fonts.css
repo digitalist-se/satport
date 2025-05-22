@@ -21,12 +21,12 @@
 }
 
 @font-face {
-  font-family: "Aptos Display";
+  font-family: "Aptos";
   src: url("/themes/custom/satport_theme/assets/fonts/aptos/AptosDisplay-Bold.woff2")
       format("woff2"),
     url("/themes/custom/satport_theme/assets/fonts/aptos/AptosDisplay-Bold.woff")
       format("woff");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   font-display: block;
 }

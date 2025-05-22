@@ -1,0 +1,38 @@
+#desktop-menu-sticky {
+  @media (width < 1024px) {
+    display: none;
+  }
+  position: absolute;
+  z-index: 3;
+  left: 2vw;
+  top: 0;
+  height: 100%;
+  padding-top: 100vh;
+  max-width: 15vw;
+}
+
+.desktop-menu {
+  position: sticky;
+  top: 5.6vw;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 0.98vw;
+    display: block;
+    font-weight: 400;
+
+    &.active {
+      font-weight: 700;
+    }
+  }
+}

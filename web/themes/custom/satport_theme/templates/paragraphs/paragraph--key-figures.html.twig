@@ -40,6 +40,8 @@
 #}
 {%
   set classes = [
+    'section',
+    'tag-section',
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
@@ -53,7 +55,7 @@
   <div class="container">
     <div class="kf-wrapper">
       {% if content.field_tag %}
-        <div class="item-tag">{{ content.field_tag.0 }}</div>
+        <div class="item-tag" data-tag="{{ content.field_tag.0|render }}" data-section-id="{{ sectionId }}">{{ content.field_tag.0 }}</div>
       {% endif %}
       {% if content.field_title %}
         <h2 class="item-section-title kf-title">{{ content.field_title.0 }}</h2>
