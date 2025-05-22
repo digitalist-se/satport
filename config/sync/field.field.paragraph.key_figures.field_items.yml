@@ -1,0 +1,43 @@
+uuid: 14b0fd3a-90ef-48f4-95a6-c815e180b52e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_items
+    - paragraphs.paragraphs_type.key_figures
+    - paragraphs.paragraphs_type.name_and_value
+  module:
+    - entity_reference_revisions
+id: paragraph.key_figures.field_items
+field_name: field_items
+entity_type: paragraph
+bundle: key_figures
+label: Items
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      name_and_value: name_and_value
+    negate: 0
+    target_bundles_drag_drop:
+      full_width_image:
+        weight: 7
+        enabled: false
+      hero:
+        weight: 8
+        enabled: false
+      key_figures:
+        weight: 9
+        enabled: false
+      name_and_value:
+        weight: 6
+        enabled: true
+      title_and_text:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

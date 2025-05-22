@@ -7,6 +7,7 @@ dependencies:
     - node.type.page
     - paragraphs.paragraphs_type.full_width_image
     - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.key_figures
     - paragraphs.paragraphs_type.title_and_text
   module:
     - entity_reference_revisions
@@ -27,6 +28,7 @@ settings:
       hero: hero
       title_and_text: title_and_text
       full_width_image: full_width_image
+      key_figures: key_figures
     negate: 0
     target_bundles_drag_drop:
       full_width_image:
@@ -35,6 +37,12 @@ settings:
       hero:
         weight: 2
         enabled: true
+      key_figures:
+        weight: 9
+        enabled: true
+      name_and_value:
+        weight: 6
+        enabled: false
       title_and_text:
         weight: 3
         enabled: true

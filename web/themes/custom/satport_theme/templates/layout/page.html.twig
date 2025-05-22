@@ -43,19 +43,21 @@
  * @see html.html.twig
  */
 #}
-<header role="banner" class="page-header" id="page-header">
-  <div class="page-header-topbar"></div>
-  {{ page.header }}
-</header>
+<div class="page-container">
+  <header role="banner" class="page-header" id="page-header">
+    <div class="page-header-topbar"></div>
+    {{ page.header }}
+  </header>
 
-<main role="main" class="page-main">
-  <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+  <main role="main" class="page-main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-  <div class="page-main-inner">
-    {{ page.content }}
-  </div>
-</main>
+    <div class="page-main-inner">
+      {{ page.content }}
+    </div>
+  </main>
 
-<footer role="contentinfo" class="page-footer">
-  {{ page.footer }}
-</footer>
+  <footer role="contentinfo" class="page-footer">
+    {{ page.footer }}
+  </footer>
+</div>

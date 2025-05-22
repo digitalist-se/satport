@@ -1,0 +1,57 @@
+.paragraph--type--key-figures {
+  padding: 60px 0;
+  position: relative;
+  background-color: var(--color-dawn-yellow);
+  @media (width >= 1024px) {
+    padding: 5.6vw 0 9.7vw;
+  }
+
+  .kf-wrapper {
+    @media (width >= 1024px) {
+      margin-left: 16.2vw;
+    }
+  }
+
+  .kf-title {
+    margin-bottom: 27px;
+    @media (width >= 1024px) {
+      margin-bottom: 12px;
+    }
+  }
+
+  /* Items */
+  .field--name-field-items {
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    @media (width >= 1024px) {
+      gap: 1.3vw;
+    }
+  }
+
+  .paragraph--type--name-and-value {
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+
+    .field--name-field-name {
+      font-size: 16px;
+      padding-bottom: 4px;
+      @media (width >= 1024px) {
+        font-size: 1.25vw;
+      }
+    }
+
+    .field--name-field-value {
+      font-weight: 300;
+      font-size: 36px;
+      line-height: 1;
+      white-space: nowrap;
+      @media (width >= 1024px) {
+        font-size: 4.4vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+uuid: 7df66b27-9ab8-4cef-8429-b74f449e6192
+langcode: en-gb
+status: true
+dependencies: {  }
+id: key_figures
+label: 'Key Figures'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

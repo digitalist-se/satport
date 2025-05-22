@@ -1,0 +1,19 @@
+uuid: 8a4cc52c-b0a9-487b-b499-c59c7240ca5f
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tag
+    - paragraphs.paragraphs_type.key_figures
+id: paragraph.key_figures.field_tag
+field_name: field_tag
+entity_type: paragraph
+bundle: key_figures
+label: Tag
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

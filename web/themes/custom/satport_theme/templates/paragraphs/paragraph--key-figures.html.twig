@@ -51,14 +51,22 @@
 {% set sectionId = 'section-' ~ paragraph.id() %}
 <div{{ attributes.setAttribute('id', sectionId).addClass(classes) }}>
   <div class="container">
-    <div class="tt-container">
-      <div class="tt-column-one">
+    <div class="kf-wrapper">
+      {% if content.field_tag %}
+        <div class="item-tag">{{ content.field_tag.0 }}</div>
+      {% endif %}
+      {% if content.field_title %}
+        <h2 class="item-section-title kf-title">{{ content.field_title.0 }}</h2>
+      {% endif %}
+      {{ content.field_items }}
+      
+      {# <div class="tt-column-one">
         <div class="tag-and-title-wrapper">
           {% if content.field_tag %}
-            <div class="tt-tag item-tag">{{ content.field_tag.0 }}</div>
+            <div class="tt-tag">{{ content.field_tag.0 }}</div>
           {% endif %}
           {% if content.field_title %}
-            <h2 class="tt-title item-section-title">{{ content.field_title.0 }}</h2>
+            <h2 class="tt-title">{{ content.field_title.0 }}</h2>
           {% endif %}
         </div>
       </div>
@@ -68,7 +76,8 @@
             {{ content.field_long_text.0 }}
           {% endif %}
         </div>
-      </div>
+      </div> #}
+
     </div>
   </div>
 </div>
