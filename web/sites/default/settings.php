@@ -47,6 +47,10 @@ if (getenv('ENVIRONMENT_NAME') === 'lando') {
   // Keep platform's in config, as some day or another Lando will update and we
   // will just need to remove this.
   $config['imagemagick.settings']['imagemagick_version'] = 'v6';
+
+  // Do not aggregate js and css files on local lando env
+  $config['system.performance']['css']['preprocess'] = FALSE;
+  $config['system.performance']['js']['preprocess'] = FALSE;
 }
 
 // Automatic Platform.sh settings.

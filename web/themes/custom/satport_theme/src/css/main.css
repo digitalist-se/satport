@@ -1,6 +1,7 @@
 @import "./fonts.css";
 @import "./global.css";
 @import "./layout/header.css";
+@import "./layout/footer.css";
 @import "./layout/page.css";
 @import "./content/node-page.css";
 @import "./content/desktop-menu.css";

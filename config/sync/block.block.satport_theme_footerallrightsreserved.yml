@@ -1,0 +1,25 @@
+uuid: a39bc57e-b444-482e-80fc-0ccfd992c03c
+langcode: en-gb
+status: true
+dependencies:
+  content:
+    - 'block_content:footer_all_rights_reserved:20973557-6b37-472d-887d-901a29610b1d'
+  module:
+    - block_content
+  theme:
+    - satport_theme
+id: satport_theme_footerallrightsreserved
+theme: satport_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:20973557-6b37-472d-887d-901a29610b1d'
+settings:
+  id: 'block_content:20973557-6b37-472d-887d-901a29610b1d'
+  label: 'Footer all rights reserved'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

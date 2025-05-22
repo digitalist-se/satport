@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.full_width_image.field_image
-    - image.style.thumbnail
+    - image.style.medium
     - paragraphs.paragraphs_type.full_width_image
   module:
     - image_widget_crop
@@ -19,7 +19,7 @@ content:
     region: content
     settings:
       progress_indicator: throbber
-      preview_image_style: thumbnail
+      preview_image_style: medium
       crop_preview_image_style: crop_thumbnail
       crop_list:
         - full_width_image_desktop
