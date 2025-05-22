@@ -42,6 +42,13 @@ $settings['hash_salt'] = 'nWO-kxeRd4JG3HzId34L-GCOYElVZdzyj5ReRIKmDrWrbzsRoiL-Ac
 // local development.
 // $settings['hash_salt'] = 'change_me';
 
+if (getenv('ENVIRONMENT_NAME') === 'lando') {
+  // Local lando has an older Imagemagick version than platform.sh.
+  // Keep platform's in config, as some day or another Lando will update and we
+  // will just need to remove this.
+  $config['imagemagick.settings']['imagemagick_version'] = 'v6';
+}
+
 // Automatic Platform.sh settings.
 if (file_exists($app_root . '/' . $site_path . '/settings.platformsh.php')) {
   include $app_root . '/' . $site_path . '/settings.platformsh.php';
