@@ -2,6 +2,7 @@
   padding: 60px 0;
   position: relative;
   background-color: var(--color-dawn-yellow);
+  z-index: 1;
   @media (width >= 1024px) {
     padding: 5.6vw 0 9.7vw;
   }
