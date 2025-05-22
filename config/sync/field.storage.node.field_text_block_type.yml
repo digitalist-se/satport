@@ -1,0 +1,27 @@
+uuid: 00fb04c0-0cfd-4b43-a703-c05848c742be
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_text_block_type
+field_name: field_text_block_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: footer_contacts
+      label: 'Footer contacts'
+    -
+      value: footer_all_rights_reserved
+      label: 'Footer all rights reserved'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

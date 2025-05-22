@@ -178,3 +178,8 @@ h2.item-section-title {
     font-size: 3.3vw;
   }
 }
+
+#drupal-live-announce {
+  position: absolute;
+  bottom: 0;
+}

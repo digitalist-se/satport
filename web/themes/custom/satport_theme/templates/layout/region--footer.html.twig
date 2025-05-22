@@ -18,8 +18,12 @@
     'region-' ~ region|clean_class,
   ]
 %}
-{% if content %}
-  <div{{ attributes.addClass(classes) }}>
-    {{ content }}
+<div{{ attributes.addClass(classes) }}>
+  <div class="footer-logo-wrapper">
+    <a href="/" rel="home">
+      <img src="/themes/custom/satport_theme/assets/logo-white.svg" alt="Home" fetchpriority="high">
+    </a>
   </div>
-{% endif %}
+
+  {{ content }}
+</div>

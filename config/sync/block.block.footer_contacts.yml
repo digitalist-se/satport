@@ -1,0 +1,24 @@
+uuid: 03910773-0e1e-4ca4-9930-4eab050f74f7
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - views.view.text_block
+  module:
+    - views
+  theme:
+    - satport_theme
+id: footer_contacts
+theme: satport_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'views_block:text_block-block_1'
+settings:
+  id: 'views_block:text_block-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }
