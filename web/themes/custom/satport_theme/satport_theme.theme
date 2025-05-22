@@ -1,0 +1,54 @@
+<?php
+
+function satport_theme_preprocess_html(&$variables) {
+  //<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  $variables['#attached']['html_head'][] = [
+    [
+      '#tag' => 'link',
+      '#attributes' => [
+        'href' => \Drupal::theme()->getActiveTheme()->getPath() . '/favicon/apple-touch-icon.png',
+        'rel' => 'apple-touch-icon',
+        'sizes' => '180x180'
+      ],
+    ],
+    'icon180x180'
+  ];
+
+  //<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  $variables['#attached']['html_head'][] = [
+    [
+      '#tag' => 'link',
+      '#attributes' => [
+        'href' => \Drupal::theme()->getActiveTheme()->getPath() . '/favicon/favicon-32x32.png',
+        'rel' => 'icon',
+        'sizes' => '32x32'
+      ],
+    ],
+    'icon32x32'
+  ];
+
+  //<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  $variables['#attached']['html_head'][] = [
+    [
+      '#tag' => 'link',
+      '#attributes' => [
+        'href' => \Drupal::theme()->getActiveTheme()->getPath() . '/favicon/favicon-16x16.png',
+        'rel' => 'icon',
+        'sizes' => '16x16'
+      ],
+    ],
+    'icon16x16'
+  ];
+
+  //<link rel="manifest" href="/site.webmanifest">
+  $variables['#attached']['html_head'][] = [
+    [
+      '#tag' => 'link',
+      '#attributes' => [
+        'href' => \Drupal::theme()->getActiveTheme()->getPath() . '/favicon/site.webmanifest',
+        'rel' => 'manifest',
+      ],
+    ],
+    'manifest'
+  ];
+}
