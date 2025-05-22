@@ -50,36 +50,25 @@
     content.field_vertical_line ? content.field_vertical_line[0]['#markup']
   ]
 %}
-{% set sectionId = 'section-' ~ paragraph.id() %}
-<div{{ attributes.setAttribute('id', sectionId).addClass(classes) }}>
+
+{% set attrs = attributes.addClass(classes) %}
+{# Add id from field_section_id if exists #}
+{% if content.field_section_id.0 %}
+  {% set attrs = attrs.setAttribute('id', content.field_section_id.0|render) %}
+{% else %}
+  {% set attrs = attrs.setAttribute('id', 'section-' ~ paragraph.id()) %}
+{% endif %}
+
+<div{{ attrs }}>
   <div class="container">
     <div class="kf-wrapper">
       {% if content.field_tag %}
-        <div class="item-tag" data-tag="{{ content.field_tag.0|render }}" data-section-id="{{ sectionId }}">{{ content.field_tag.0 }}</div>
+        <div class="item-tag">{{ content.field_tag.0 }}</div>
       {% endif %}
       {% if content.field_title %}
         <h2 class="item-section-title kf-title">{{ content.field_title.0 }}</h2>
       {% endif %}
       {{ content.field_items }}
-      
-      {# <div class="tt-column-one">
-        <div class="tag-and-title-wrapper">
-          {% if content.field_tag %}
-            <div class="tt-tag">{{ content.field_tag.0 }}</div>
-          {% endif %}
-          {% if content.field_title %}
-            <h2 class="tt-title">{{ content.field_title.0 }}</h2>
-          {% endif %}
-        </div>
-      </div>
-      <div class="tt-column-two">
-        <div class="text-wrapper">
-          {% if content.field_long_text %}
-            {{ content.field_long_text.0 }}
-          {% endif %}
-        </div>
-      </div> #}
-
     </div>
   </div>
 </div>

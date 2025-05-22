@@ -4,29 +4,72 @@
       const pageHeader = document.getElementById("page-header");
       const mainMenuFixed = document.getElementById("mobile-menu-fixed");
       const mainMenuScroll = document.getElementById("mobile-menu-scroll");
+      const mobileMenu = document.getElementById("mobile-menu");
       const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
       const heroSections = document.querySelectorAll(".paragraph--type--hero");
       const fullWidthImageSections = document.querySelectorAll(
         ".paragraph--type--full-width-image"
       );
       const desktopMenuSticky = document.getElementById("desktop-menu-sticky");
-      const desktopMenu = document.getElementById("desktop-menu");
       const tagSections = document.querySelectorAll(".tag-section");
+      const desktopMenu = document.getElementById("desktop-menu");
       const desktopMenuLinks = document.querySelectorAll("#desktop-menu a");
 
       // Mobile Menu toggle
-      mobileMenuToggle.addEventListener("click", () => {
+      function closeMobileMenu() {
+        mainMenuFixed.classList.remove("open");
+        mobileMenuToggle.classList.remove("open");
+        document.documentElement.classList.remove("scroll-lock");
+      }
+      mobileMenuToggle.addEventListener("click", function () {
         mainMenuFixed.classList.toggle("open");
         mobileMenuToggle.classList.toggle("open");
         document.documentElement.classList.toggle("scroll-lock");
       });
 
-      // Render Desktop and Mobile menu links from tag sections.
-      tagSections.forEach(function (tagSection) {});
+      // Init Page Menu.
+      function initPageMenu() {
+        if (!desktopMenu || !mobileMenu) return;
 
-      // Desktop menu position: middle of first section with title (data-section-title) attribute.
+        // Create Mobile Menu.
+        mobileMenu.innerHTML = desktopMenu.innerHTML;
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+
+        // Init link click events.
+        function handleMenuLinkClick(e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href").substring(1);
+          const target = document.getElementById(targetId);
+          if (!target) return;
+
+          closeMobileMenu();
+
+          const headerOffset = window.innerWidth < 1024 ? 92 : 0;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition =
+            elementPosition + window.scrollY - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
+
+        desktopMenuLinks.forEach(function (desktopMenuLink) {
+          desktopMenuLink.addEventListener("click", handleMenuLinkClick);
+        });
+        mobileMenuLinks.forEach(function (desktopMenuLink) {
+          desktopMenuLink.addEventListener("click", handleMenuLinkClick);
+        });
+      }
+      initPageMenu();
+
+      // Desktop menu position calculation.
       function setDesktopMenuPosition() {
-        const firstTag = document.querySelector(".section [data-tag]");
+        if (!desktopMenuSticky) return;
+
+        const firstTag = document.querySelector(".section .item-tag");
         const topOffset = firstTag.getBoundingClientRect().top + window.scrollY;
         desktopMenuSticky.style.paddingTop = topOffset + "px";
       }
@@ -91,7 +134,7 @@
       onResize();
 
       function setDesktopMenuActiveItem() {
-        if (!tagSectionPositions.length) return;
+        if (!tagSectionPositions.length || !desktopMenuLinks.length) return;
 
         const desktopMenuTopOffset =
           desktopMenu.getBoundingClientRect().top + window.scrollY;
@@ -125,7 +168,6 @@
       let lastKnownScrollPosition = 0;
       let ticking = false;
       function onScroll(scrollPos) {
-        // console.log(scrollPos);
         // Set active Desktop Menu item
         setDesktopMenuActiveItem();
       }

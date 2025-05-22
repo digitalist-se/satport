@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.key_figures.field_items
+    - field.field.paragraph.key_figures.field_section_id
     - field.field.paragraph.key_figures.field_tag
     - field.field.paragraph.key_figures.field_title
     - paragraphs.paragraphs_type.key_figures
@@ -22,6 +23,14 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_section_id:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
     region: content
   field_tag:
     type: string

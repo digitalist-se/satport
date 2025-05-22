@@ -36,6 +36,12 @@
  * @see template_preprocess_field()
  */
 #}
-{% for item in items %}
-  {{ item.content }}
-{% endfor %}
+{% if items|length > 0 %}
+  <div id="desktop-menu-sticky">
+    <ul id="desktop-menu" class="desktop-menu">
+      {% for item in items %}
+        <li>{{ item.content }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
