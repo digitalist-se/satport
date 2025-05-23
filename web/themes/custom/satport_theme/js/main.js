@@ -133,6 +133,7 @@
       window.addEventListener("resize", onResize);
       onResize();
 
+      // Determine and set the active desktop menu item.
       function setDesktopMenuActiveItem() {
         if (!tagSectionPositions.length || !desktopMenuLinks.length) return;
 
@@ -164,12 +165,32 @@
         }
       }
 
+      // Process Full Width Image sections and check if background image should be fixed or not.
+
+      function checkFullWidthImageAttachment(scrollPos) {
+        const screenBottom = scrollPos + window.innerHeight;
+        fullWidthImageSections.forEach(function (fullWidthImageSection) {
+          const sectionBottomOffset =
+            fullWidthImageSection.getBoundingClientRect().bottom +
+            window.scrollY;
+          // After user has scrolled past the bottom of the section, the image should scroll with content.
+          if (screenBottom > sectionBottomOffset) {
+            fullWidthImageSection.style.backgroundAttachment = "scroll";
+          } else {
+            // backgroundAttachment "fixed" is by default so we just remove the property
+            fullWidthImageSection.style.backgroundAttachment = "";
+          }
+        });
+      }
+
       // Attach the scroll listener.
       let lastKnownScrollPosition = 0;
       let ticking = false;
       function onScroll(scrollPos) {
-        // Set active Desktop Menu item
-        setDesktopMenuActiveItem();
+        if (window.innerWidth >= 1024) {
+          setDesktopMenuActiveItem();
+          checkFullWidthImageAttachment(scrollPos);
+        }
       }
 
       document.addEventListener("scroll", (event) => {
@@ -184,7 +205,7 @@
           ticking = true;
         }
       });
-      onScroll(0);
+      onScroll(window.scrollY);
     },
   };
 })(jQuery, Drupal, once);
