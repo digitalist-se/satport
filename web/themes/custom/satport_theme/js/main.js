@@ -14,6 +14,13 @@
       const tagSections = document.querySelectorAll(".tag-section");
       const desktopMenu = document.getElementById("desktop-menu");
       const desktopMenuLinks = document.querySelectorAll("#desktop-menu a");
+      const contactUsOverlayToggles = document.querySelectorAll(
+        "[data-toggle-contact-us]"
+      );
+      const modalContactUs = document.getElementById("modal-contact-us");
+      const modalCloseButton = document.querySelector(
+        "[data-close-contact-us]"
+      );
 
       // Mobile Menu toggle
       function closeMobileMenu() {
@@ -25,6 +32,49 @@
         mainMenuFixed.classList.toggle("open");
         mobileMenuToggle.classList.toggle("open");
         document.documentElement.classList.toggle("scroll-lock");
+      });
+
+      // Contact Us Overlay Toggle.
+      contactUsOverlayToggles.forEach(function (contactUsOverlayToggle) {
+        contactUsOverlayToggle.addEventListener("click", function (e) {
+          e.preventDefault();
+          if (!modalContactUs) return;
+
+          closeMobileMenu();
+
+          modalContactUs.classList.add("open");
+          document.documentElement.classList.add("scroll-lock");
+        });
+      });
+
+      function closeModal() {
+        modalContactUs.classList.remove("open");
+        document.documentElement.classList.remove("scroll-lock");
+      }
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeModal();
+        }
+      });
+
+      document.addEventListener("click", function (event) {
+        const modalWrapper = document.querySelector(".modal-wrapper");
+
+        if (
+          modalWrapper &&
+          modalContactUs.contains(event.target) &&
+          !modalWrapper.contains(event.target)
+        ) {
+          closeModal();
+        }
+      });
+
+      modalCloseButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (!modalContactUs) return;
+
+        closeModal();
       });
 
       // Init Page Menu.

@@ -17,6 +17,9 @@ settings:
     -
       value: footer_all_rights_reserved
       label: 'Footer all rights reserved'
+    -
+      value: header_contact_us
+      label: 'Header Contact us'
   allowed_values_function: ''
 module: options
 locked: false

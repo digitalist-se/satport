@@ -22,7 +22,7 @@
   {{ content }}
 
   <div class="contact-wrapper">
-    <a href="#" class="button cta white">Contact us</a>
+    <a href="#" data-toggle-contact-us class="button cta white">Contact us</a>
   </div>
 
   <div class="mobile-menu-toggle-wrapper">
@@ -44,12 +44,32 @@
   <div id="mobile-menu-fixed">
     <div id="mobile-menu-scroll">
       <div id="mobile-menu-wrapper">
+        {# Contents (menu items) for this menu are rendered from field--node--field-page-menu.html.twig via js/main.js #}
         <ul id="mobile-menu" class="mobile-menu"></ul>
 
         <div class="mobile-menu-contact-wrapper">
-          <a href="#">Contact Us</a>
+          <a href="#" data-toggle-contact-us>Contact Us</a>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div id="modal-contact-us" class="modal-fixed">
+    <div class="modal-wrapper">
+      <button data-close-contact-us class="button reset modal-close">
+        <img src="/themes/custom/satport_theme/assets/icon-close.svg" alt="Icon Close" />
+      </button>
+
+      <div class="modal-content">
+        <div class="modal-logo-wrapper">
+          <img src="/themes/custom/satport_theme/assets/logo-infrastructure.svg" alt="SatPort infrastructure" />
+        </div>
+
+        <div>
+          {{ drupal_view('text_block', 'header_contact_us') }}
+        </div>
+      </div>
+      
     </div>
   </div>
 </div>
