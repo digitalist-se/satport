@@ -22,9 +22,9 @@
 
 @font-face {
   font-family: "Aptos";
-  src: url("/themes/custom/satport_theme/assets/fonts/aptos/AptosDisplay-Bold.woff2")
+  src: url("/themes/custom/satport_theme/assets/fonts/aptos/Aptos-Bold.woff2")
       format("woff2"),
-    url("/themes/custom/satport_theme/assets/fonts/aptos/AptosDisplay-Bold.woff")
+    url("/themes/custom/satport_theme/assets/fonts/aptos/Aptos-Bold.woff")
       format("woff");
   font-weight: 700;
   font-style: normal;
