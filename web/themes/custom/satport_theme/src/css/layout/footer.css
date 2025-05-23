@@ -61,5 +61,8 @@
   p {
     font-size: 12px;
     letter-spacing: 0.05em;
+    @media (width >= 768px) {
+      font-size: 0.83vw;
+    }
   }
 }
