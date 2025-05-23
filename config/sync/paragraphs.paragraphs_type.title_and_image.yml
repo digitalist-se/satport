@@ -1,0 +1,10 @@
+uuid: cfe67cb8-0f39-4d01-b800-5f90a78b59f8
+langcode: en-gb
+status: true
+dependencies: {  }
+id: title_and_image
+label: 'Title and image'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

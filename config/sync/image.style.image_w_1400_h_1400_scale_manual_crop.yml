@@ -1,0 +1,26 @@
+uuid: 53c0a7ff-e89e-4a97-80b7-203c8771d87c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - crop.type.square
+  module:
+    - crop
+name: image_w_1400_h_1400_scale_manual_crop
+label: image_w_1400_h_1400_scale_manual_crop
+effects:
+  4ccce1c6-dfb5-4868-9088-afe594880c65:
+    uuid: 4ccce1c6-dfb5-4868-9088-afe594880c65
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: square
+      automatic_crop_provider: null
+  ec7f6692-40f0-4609-a173-9019cae60ef0:
+    uuid: ec7f6692-40f0-4609-a173-9019cae60ef0
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 1400
+      height: 1400
+      anchor: center-center

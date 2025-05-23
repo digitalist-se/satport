@@ -1,0 +1,53 @@
+.paragraph--type--title-and-image {
+  background: #fff;
+  position: relative;
+  z-index: 2;
+
+  .ti-container {
+    @media (width >= 768px) {
+      display: flex;
+      gap: 0;
+    }
+  }
+
+  .ti-column-one {
+    padding: 60px 14px;
+    @media (width >= 768px) {
+      width: 50%;
+      padding: 60px 14px;
+    }
+    @media (width >= 1024px) {
+      padding: 5.6vw 2vw;
+    }
+  }
+
+  .ti-column-two {
+    @media (width >= 768px) {
+      width: 50%;
+    }
+  }
+
+  .tag-and-title-wrapper {
+    @media (width >= 1024px) {
+      margin-left: 16.2vw;
+      /* max-width: 26.4vw; */
+    }
+  }
+
+  .ti-title {
+    margin: 0;
+    @media (width >= 768px) and (width < 1024px) {
+      font-size: 38px;
+    }
+  }
+
+  .image-wrapper {
+    width: 100%;
+
+    picture,
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

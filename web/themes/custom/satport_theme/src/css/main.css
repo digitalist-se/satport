@@ -3,10 +3,11 @@
 @import "./layout/header.css";
 @import "./layout/footer.css";
 @import "./layout/page.css";
+@import "./layout/admin-tabs.css";
 @import "./content/node-page.css";
 @import "./content/desktop-menu.css";
 @import "./content/section-hero.css";
 @import "./content/section-title-and-text.css";
 @import "./content/section-full-width-image.css";
 @import "./content/section-key-figures.css";
-@import "./layout/admin-tabs.css";
+@import "./content/section-title-and-image.css";

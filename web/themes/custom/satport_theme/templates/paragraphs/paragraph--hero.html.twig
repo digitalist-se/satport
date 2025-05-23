@@ -56,10 +56,10 @@
   </div>
   <div class="hero-content-wrapper">
     <div class="hero-content-inner">
-      {% if content.field_title %}
+      {% if content.field_title.0 %}
         <h2 class="hero-title">{{ content.field_title.0 }}</h2>
       {% endif %}
-      {% if content.field_text %}
+      {% if content.field_text.0 %}
         <p class="hero-text">{{ content.field_text.0 }}</p>
       {% endif %}
     </div>

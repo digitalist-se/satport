@@ -1,0 +1,12 @@
+uuid: 98955333-284c-46e2-9610-cd76ec39e211
+langcode: en-gb
+status: true
+dependencies: {  }
+label: Mobile
+id: mobile
+description: ''
+aspect_ratio: '320:400'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

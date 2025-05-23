@@ -1,0 +1,24 @@
+uuid: b4279b02-2e76-4b41-a356-766b8bbf4d64
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - image.style.image_w_1400_h_1400_scale_manual_crop
+    - image.style.image_w_800_h_1000_scale_manual_crop
+  theme:
+    - satport_theme
+id: section_title_and_image
+label: 'Section title and image'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: image_w_1400_h_1400_scale_manual_crop
+    breakpoint_id: d10theme.desktop
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: image_w_1400_h_1400_scale_manual_crop
+    breakpoint_id: d10theme.tablet
+    multiplier: 1x
+breakpoint_group: satport_theme
+fallback_image_style: image_w_800_h_1000_scale_manual_crop

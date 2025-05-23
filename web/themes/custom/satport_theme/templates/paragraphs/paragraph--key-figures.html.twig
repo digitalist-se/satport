@@ -62,10 +62,10 @@
 <div{{ attrs }}>
   <div class="container">
     <div class="kf-wrapper">
-      {% if content.field_tag %}
+      {% if content.field_tag.0 %}
         <div class="item-tag">{{ content.field_tag.0 }}</div>
       {% endif %}
-      {% if content.field_title %}
+      {% if content.field_title.0 %}
         <h2 class="item-section-title kf-title">{{ content.field_title.0 }}</h2>
       {% endif %}
       {{ content.field_items }}

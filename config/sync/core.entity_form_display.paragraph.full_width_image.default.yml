@@ -22,8 +22,8 @@ content:
       preview_image_style: medium
       crop_preview_image_style: crop_thumbnail
       crop_list:
+        - mobile
         - full_width_image_desktop
-        - full_width_image_mobile
       crop_types_required: {  }
       warn_multiple_usages: true
       show_crop_area: false

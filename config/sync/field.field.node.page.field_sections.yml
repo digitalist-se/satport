@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.full_width_image
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.key_figures
+    - paragraphs.paragraphs_type.title_and_image
     - paragraphs.paragraphs_type.title_and_text
   module:
     - entity_reference_revisions
@@ -28,6 +29,7 @@ settings:
       hero: hero
       title_and_text: title_and_text
       full_width_image: full_width_image
+      title_and_image: title_and_image
       key_figures: key_figures
     negate: 0
     target_bundles_drag_drop:
@@ -43,6 +45,9 @@ settings:
       name_and_value:
         weight: 6
         enabled: false
+      title_and_image:
+        weight: 7
+        enabled: true
       title_and_text:
         weight: 3
         enabled: true

@@ -40,14 +40,41 @@
 #}
 {%
   set classes = [
+    'section',
+    'tag-section',
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    content.field_background_color ? content.field_background_color[0]['#markup'],
+    content.field_vertical_line ? content.field_vertical_line[0]['#markup']
   ]
 %}
-{% set sectionId = 'section-' ~ paragraph.id() %}
-<div{{ attributes.setAttribute('id', sectionId).addClass(classes) }} 
-  data-mobile-image="{{content.field_image.0['#item'].entity.uri.value|image_style('image_w_800_h_1000_scale_manual_crop')}}" 
-  data-desktop-image="{{content.field_image.0['#item'].entity.uri.value|image_style('image_w_2560_h_1440_scale_manual_crop')}}">
+
+{% set attrs = attributes.addClass(classes) %}
+{# Add id from field_section_id if exists #}
+{% if content.field_section_id.0 %}
+  {% set attrs = attrs.setAttribute('id', content.field_section_id.0|render) %}
+{% else %}
+  {% set attrs = attrs.setAttribute('id', 'section-' ~ paragraph.id()) %}
+{% endif %}
+
+<div{{ attrs }}>
+  <div class="ti-container">
+    <div class="ti-column-one">
+      <div class="tag-and-title-wrapper">
+        {% if content.field_tag.0 %}
+          <div class="item-tag">{{ content.field_tag.0 }}</div>
+        {% endif %}
+        {% if content.field_title.0 %}
+          <h2 class="item-section-title ti-title">{{ content.field_title.0 }}</h2>
+        {% endif %}
+      </div>
+    </div>
+    <div class="ti-column-two">
+      <div class="image-wrapper">
+        {{ content.field_image.0 }}
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,9 +1,9 @@
-uuid: 907ba16b-133a-409a-9336-5b1bf461537e
+uuid: d3eb780d-d6d3-4bac-bc9e-7c45e88146dc
 langcode: en-gb
 status: true
 dependencies: {  }
-label: 'Full Width Image Mobile'
-id: full_width_image_mobile
+label: Square
+id: square
 description: ''
 aspect_ratio: '1:1'
 soft_limit_width: null

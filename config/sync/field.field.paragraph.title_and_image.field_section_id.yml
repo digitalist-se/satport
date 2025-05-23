@@ -1,0 +1,19 @@
+uuid: cc04f40f-ea8a-4027-b33b-af6e33b66ea5
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_id
+    - paragraphs.paragraphs_type.title_and_image
+id: paragraph.title_and_image.field_section_id
+field_name: field_section_id
+entity_type: paragraph
+bundle: title_and_image
+label: 'Section ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
