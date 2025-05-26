@@ -22,6 +22,14 @@
         "[data-close-contact-us]"
       );
 
+      // Hero: Set section height for mobile.
+      heroSections.forEach(function (heroSection) {
+        if (window.innerWidth < 1024) {
+          heroSection.style.height =
+            window.innerHeight - pageHeader.clientHeight + "px";
+        }
+      });
+
       // Mobile Menu toggle
       function closeMobileMenu() {
         mainMenuFixed.classList.remove("open");
@@ -152,13 +160,10 @@
           document.documentElement.classList.remove("scroll-lock");
         }
 
-        // Hero: Set min-height to be window height.
+        // Hero: Reset height for desktop, use css height.
         heroSections.forEach(function (heroSection) {
           if (window.innerWidth >= 1024) {
-            heroSection.style.height = window.innerHeight + "px";
-          } else {
-            heroSection.style.height =
-              window.innerHeight - pageHeader.clientHeight + "px";
+            heroSection.style.height = "";
           }
         });
 

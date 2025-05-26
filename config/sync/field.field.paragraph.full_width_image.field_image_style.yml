@@ -1,0 +1,21 @@
+uuid: 4c9cd127-90c3-4cdd-82be-6c5684f0d69b
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_style
+    - paragraphs.paragraphs_type.full_width_image
+  module:
+    - options
+id: paragraph.full_width_image.field_image_style
+field_name: field_image_style
+entity_type: paragraph
+bundle: full_width_image
+label: 'Image style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

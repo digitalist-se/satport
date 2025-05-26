@@ -46,8 +46,13 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
-{% set sectionId = 'section-' ~ paragraph.id() %}
-<div{{ attributes.setAttribute('id', sectionId).addClass(classes) }} 
+{% set attrs = attributes.addClass(classes) %}
+{% set section_id = 'section-' ~ paragraph.id() %}
+{% set attrs = attrs.setAttribute('id', section_id) %}
+
+{# Image style #}
+{% set attrs = attributes.addClass('image-style-' ~ content.field_image_style.0|render) %}
+<div{{ attrs }} 
   data-mobile-image="{{content.field_image.0['#item'].entity.uri.value|image_style('image_w_800_h_1000_scale_manual_crop')}}" 
   data-desktop-image="{{content.field_image.0['#item'].entity.uri.value|image_style('image_w_2560_h_1440_scale_manual_crop')}}">
 </div>

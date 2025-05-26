@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.full_width_image.field_image
+    - field.field.paragraph.full_width_image.field_image_style
     - image.style.medium
     - paragraphs.paragraphs_type.full_width_image
   module:
@@ -28,6 +29,12 @@ content:
       warn_multiple_usages: true
       show_crop_area: false
       show_default_crop: true
+    third_party_settings: {  }
+  field_image_style:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true

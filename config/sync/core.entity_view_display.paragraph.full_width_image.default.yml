@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.full_width_image.field_image
+    - field.field.paragraph.full_width_image.field_image_style
     - paragraphs.paragraphs_type.full_width_image
   module:
     - image
+    - options
 id: paragraph.full_width_image.default
 targetEntityType: paragraph
 bundle: full_width_image
@@ -22,5 +24,12 @@ content:
         attribute: lazy
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_image_style:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden: {  }
