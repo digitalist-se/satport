@@ -56,3 +56,18 @@
     }
   }
 }
+
+.section-key-figures-image {
+  padding: 60px 14px;
+  position: relative;
+  background-color: #fff;
+  z-index: 1;
+  border-bottom: 1px solid #000;
+  @media (width >= 1024px) {
+    padding: 8.1vw 16.2vw;
+  }
+
+  img {
+    width: 100%;
+  }
+}
