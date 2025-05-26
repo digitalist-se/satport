@@ -53,8 +53,9 @@
 
 {% set attrs = attributes.addClass(classes) %}
 {# Add id from field_section_id if exists #}
-{% if content.field_section_id.0 %}
-  {% set attrs = attrs.setAttribute('id', content.field_section_id.0|render) %}
+{% set section_id = content.field_section_id.0|render %}
+{% if section_id %}
+  {% set attrs = attrs.setAttribute('id', section_id) %}
 {% else %}
   {% set attrs = attrs.setAttribute('id', 'section-' ~ paragraph.id()) %}
 {% endif %}
@@ -81,4 +82,9 @@
       </div>
     </div>
   </div>
+
+  {# Add custom Ground Infrastucture image (overlayed with section to bottom) #}
+  {% if section_id == 'ground-infrastructure' %}
+    <img class="ground-infra-overlay-image" src="/themes/custom/satport_theme/assets/ground-infra-blueprint.svg" alt="Ground Infrastructure blueprint graphics" />
+  {% endif %}
 </div>

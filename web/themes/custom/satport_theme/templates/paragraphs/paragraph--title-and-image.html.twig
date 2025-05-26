@@ -53,8 +53,9 @@
 
 {% set attrs = attributes.addClass(classes) %}
 {# Add id from field_section_id if exists #}
-{% if content.field_section_id.0 %}
-  {% set attrs = attrs.setAttribute('id', content.field_section_id.0|render) %}
+{% set section_id = content.field_section_id.0|render %}
+{% if section_id %}
+  {% set attrs = attrs.setAttribute('id', section_id) %}
 {% else %}
   {% set attrs = attrs.setAttribute('id', 'section-' ~ paragraph.id()) %}
 {% endif %}

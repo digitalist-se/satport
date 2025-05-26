@@ -83,3 +83,28 @@
     }
   }
 }
+
+#ground-infrastructure {
+  @media (width < 1024px) {
+    padding-bottom: 260px;
+  }
+  @media (width >= 1024px) {
+    padding-bottom: 16vw;
+  }
+}
+
+.ground-infra-overlay-image {
+  position: absolute;
+  bottom: 0;
+  @media (width < 1024px) {
+    width: 100%;
+    transform: translateY(38%);
+    max-width: 240px;
+    left: 14px;
+  }
+  @media (width >= 1024px) {
+    right: 52%;
+    width: 30%;
+    transform: translateY(29%);
+  }
+}
