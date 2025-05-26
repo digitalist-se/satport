@@ -79,7 +79,10 @@
 
     ul {
       margin: 0;
-      padding: 0 0 0 22px;
+      padding: 0 0 0 1em;
+      @media (width >= 1024px) {
+        padding: 0 0 0 0.9em;
+      }
     }
   }
 }
@@ -89,7 +92,13 @@
     padding-bottom: 260px;
   }
   @media (width >= 1024px) {
-    padding-bottom: 16vw;
+    padding-bottom: 19vw;
+  }
+
+  .tag-and-title-wrapper {
+    @media (width < 768px) {
+      max-width: 300px;
+    }
   }
 }
 
@@ -98,7 +107,7 @@
   bottom: 0;
   @media (width < 1024px) {
     width: 100%;
-    transform: translateY(38%);
+    transform: translateY(44%);
     max-width: 240px;
     left: 14px;
   }
@@ -106,5 +115,13 @@
     right: 52%;
     width: 30%;
     transform: translateY(29%);
+  }
+}
+
+#words-from-our-ceo {
+  .tag-and-title-wrapper {
+    @media (width >= 1024px) {
+      max-width: 19.4vw;
+    }
   }
 }

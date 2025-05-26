@@ -64,8 +64,12 @@
   .hero-text {
     margin: 0;
     font-size: 16px;
+    max-width: 188px;
     @media (width >= 375px) {
       font-size: 18px;
+    }
+    @media (width >= 768px) {
+      max-width: none;
     }
     @media (width >= 1024px) {
       /* font-size: 22px; */

@@ -50,12 +50,10 @@ p {
   }
 }
 
-.page-container {
-  ul,
-  ol {
-    @media (width >= 1024px) {
-      font-size: 1.25vw;
-    }
+ul,
+ol {
+  @media (width >= 1024px) {
+    font-size: 0.98vw;
   }
 }
 
@@ -74,25 +72,25 @@ h6 {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 36px;
   @media (width >= 768px) {
     font-size: 60px;
   }
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 36px;
   @media (width >= 768px) {
     font-size: 48px;
   }
 }
 
 h3 {
-  font-size: 26px;
+  font-size: 30px;
 }
 
 h4 {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 h5 {

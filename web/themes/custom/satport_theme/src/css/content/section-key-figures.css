@@ -62,9 +62,24 @@
   position: relative;
   background-color: #fff;
   z-index: 1;
-  border-bottom: 1px solid #000;
   @media (width >= 1024px) {
     padding: 8.1vw 16.2vw;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #000;
+    @media (width >= 1024px) {
+      left: 1vw;
+      right: 1vw;
+      width: calc(100% - 2vw);
+    }
   }
 
   img {
