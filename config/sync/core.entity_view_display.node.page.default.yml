@@ -3,18 +3,27 @@ langcode: en-gb
 status: true
 dependencies:
   config:
+    - field.field.node.page.field_meta_tags
     - field.field.node.page.field_page_menu
     - field.field.node.page.field_sections
     - node.type.page
   module:
     - entity_reference_revisions
     - link
+    - metatag
     - user
 id: node.page.default
 targetEntityType: node
 bundle: page
 mode: default
 content:
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
   field_page_menu:
     type: link
     label: above

@@ -23,6 +23,7 @@
     "drupal/devel": "^5.3",
     "drupal/image_widget_crop": "^3.0",
     "drupal/imagemagick": "^4.0",
+    "drupal/metatag": "^2.1",
     "drupal/paragraphs": "^1.19",
     "drupal/pathauto": "^1.13",
     "drupal/redis": "^1.9",
