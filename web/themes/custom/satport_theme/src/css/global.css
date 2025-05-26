@@ -183,3 +183,12 @@ h2.item-section-title {
   position: absolute;
   bottom: 0;
 }
+
+.section-separator {
+  width: 100%;
+  background: #fff;
+  height: 40px;
+  @media (width >= 1024px) {
+    height: 5.6vw;
+  }
+}
