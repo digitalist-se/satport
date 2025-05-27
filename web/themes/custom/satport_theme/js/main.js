@@ -78,12 +78,14 @@
         }
       });
 
-      modalCloseButton.addEventListener("click", function (e) {
-        e.preventDefault();
-        if (!modalContactUs) return;
+      if (modalCloseButton) {
+        modalCloseButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          if (!modalContactUs) return;
 
-        closeModal();
-      });
+          closeModal();
+        });
+      }
 
       // Init Page Menu.
       function initPageMenu() {
