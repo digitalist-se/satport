@@ -21,9 +21,10 @@
 <div{{ attributes.addClass(classes) }}>
   {{ content }}
 
-  <div class="contact-wrapper">
+  {# Hide contact us functionality temporarily #}
+  {#<div class="contact-wrapper">
     <a href="#" data-toggle-contact-us class="button cta white">Contact us</a>
-  </div>
+  </div>#}
 
   <div class="mobile-menu-toggle-wrapper">
     <button id="mobile-menu-toggle" class="button reset mobile-menu-toggle">
@@ -47,14 +48,16 @@
         {# Contents (menu items) for this menu are rendered from field--node--field-page-menu.html.twig via js/main.js #}
         <ul id="mobile-menu" class="mobile-menu"></ul>
 
-        <div class="mobile-menu-contact-wrapper">
+        {# Hide contact us functionality temporarily #}
+        {#<div class="mobile-menu-contact-wrapper">
           <a href="#" data-toggle-contact-us>Contact Us</a>
-        </div>
+        </div>#}
       </div>
     </div>
   </div>
 
-  <div id="modal-contact-us" class="modal-fixed">
+  {# Hide contact us functionality temporarily #}
+  {#<div id="modal-contact-us" class="modal-fixed">
     <div class="modal-wrapper">
       <button data-close-contact-us class="button reset modal-close">
         <img src="/themes/custom/satport_theme/assets/icon-close.svg" alt="Icon Close" />
@@ -71,5 +74,5 @@
       </div>
       
     </div>
-  </div>
+  </div>#}
 </div>
