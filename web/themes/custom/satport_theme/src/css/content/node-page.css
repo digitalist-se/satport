@@ -1,5 +1,12 @@
 .node--type-page {
   position: relative;
+
+  ul,
+  ol {
+    @media (width >= 1024px) {
+      font-size: 0.98vw;
+    }
+  }
 }
 
 .vertical-line-left,
