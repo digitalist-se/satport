@@ -1,0 +1,38 @@
+uuid: 74b4c396-414e-462f-8577-1b47fd9c5f33
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_open_graph_image
+    - node.type.page
+  module:
+    - image
+id: node.page.field_open_graph_image
+field_name: field_open_graph_image
+entity_type: node
+bundle: page
+label: 'Open Graph Image'
+description: 'Special image that social media platforms (like Facebook, LinkedIn, X) use when someone shares that page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

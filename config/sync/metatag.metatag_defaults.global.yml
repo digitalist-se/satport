@@ -8,4 +8,7 @@ id: global
 label: Global
 tags:
   canonical_url: '[current-page:url]'
+  og_image: '[node:field_open_graph_image:entity:url]'
+  og_site_name: SatPort
+  og_title: '[current-page:title] | [site:name]'
   title: '[current-page:title] | [site:name]'

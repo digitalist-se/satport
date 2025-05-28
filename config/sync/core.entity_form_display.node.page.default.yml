@@ -4,10 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_open_graph_image
     - field.field.node.page.field_page_menu
     - field.field.node.page.field_sections
+    - image.style.thumbnail
     - node.type.page
   module:
+    - image
     - link
     - metatag
     - paragraphs
@@ -30,6 +33,14 @@ content:
     settings:
       sidebar: true
       use_details: true
+    third_party_settings: {  }
+  field_open_graph_image:
+    type: image_image
+    weight: 27
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   field_page_menu:
     type: link_default

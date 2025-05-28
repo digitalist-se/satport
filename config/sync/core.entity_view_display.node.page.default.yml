@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_open_graph_image
     - field.field.node.page.field_page_menu
     - field.field.node.page.field_sections
     - node.type.page
@@ -22,7 +23,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 103
+    weight: 3
     region: content
   field_page_menu:
     type: link
@@ -34,7 +35,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 102
+    weight: 2
     region: content
   field_sections:
     type: entity_reference_revisions_entity_view
@@ -43,12 +44,13 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
+  field_open_graph_image: true
   langcode: true
