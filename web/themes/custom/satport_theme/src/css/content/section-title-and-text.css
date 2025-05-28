@@ -57,6 +57,9 @@
   }
 
   .tag-and-title-wrapper {
+    @media (width < 1024px) {
+      max-width: 600px;
+    }
     @media (width >= 1024px) {
       margin-left: 16.2vw;
       max-width: 26.4vw;
@@ -73,6 +76,9 @@
   }
 
   .text-wrapper {
+    @media (width < 1024px) {
+      max-width: 600px;
+    }
     @media (width >= 1024px) {
       max-width: 38.9vw;
     }
