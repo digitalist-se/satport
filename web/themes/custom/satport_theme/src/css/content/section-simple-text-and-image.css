@@ -1,0 +1,48 @@
+.paragraph--type--simple-text-and-image {
+  position: relative;
+  background-color: #fff;
+  z-index: 1;
+
+  &:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #000;
+    @media (width >= 1024px) {
+      left: 1vw;
+      right: 1vw;
+      width: calc(100% - 2vw);
+    }
+  }
+
+  .simple-text-and-image-inner {
+    padding: 60px 0;
+    @media (width >= 1024px) {
+      padding: 8.1vw 16.2vw;
+    }
+  }
+
+  .field--name-field-long-text {
+    max-width: 600px;
+    margin-bottom: 32px;
+    @media (width >= 1024px) {
+      max-width: 23vw;
+      margin-bottom: 2.78vw;
+    }
+
+    &:last-child,
+    p:last-child {
+      margin: 0;
+    }
+  }
+
+  .field--name-field-svg-image {
+    img {
+      width: 100%;
+    }
+  }
+}

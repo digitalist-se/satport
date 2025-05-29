@@ -1,0 +1,24 @@
+uuid: 2c2a705a-a562-4798-b9da-fb4cd9501e43
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_long_text
+    - filter.format.filtered_html
+    - paragraphs.paragraphs_type.simple_text_and_image
+  module:
+    - text
+id: paragraph.simple_text_and_image.field_long_text
+field_name: field_long_text
+entity_type: paragraph
+bundle: simple_text_and_image
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - filtered_html
+field_type: text_long
