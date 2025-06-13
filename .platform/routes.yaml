@@ -15,3 +15,9 @@
 "https://{default}/":
     type: redirect
     to: "https://www.{default}/"
+
+# Redirect all other urls to default. When this project was created, satportinfrastructure.com was the default domain. It is now changed to satport.com
+# Below route is to support the older domain in case someone is still using it
+"https://{all}/":
+    type: redirect
+    to: "https://www.{default}/"
