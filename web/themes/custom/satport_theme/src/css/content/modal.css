@@ -8,9 +8,6 @@
   opacity: 0;
   transition: opacity 0.4s;
 
-  pointer-events: auto;
-  opacity: 1;
-
   &.open {
     pointer-events: auto;
     opacity: 1;
