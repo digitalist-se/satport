@@ -8,6 +8,9 @@
   opacity: 0;
   transition: opacity 0.4s;
 
+  pointer-events: auto;
+  opacity: 1;
+
   &.open {
     pointer-events: auto;
     opacity: 1;
@@ -62,6 +65,8 @@
     top: 28px;
     padding: 30px 28px 60px;
     min-height: 80vh;
+    display: flex;
+    justify-content: space-between;
   }
   @media (width >= 1356px) {
     left: calc(50% - 650px);
@@ -70,9 +75,15 @@
 }
 
 .modal-content {
-  position: relative;
+  margin-bottom: 2rem;
   @media (width >= 1024px) {
     max-width: 22.22vw;
+  }
+}
+
+.modal-content-inner {
+  position: relative;
+  @media (width >= 1024px) {
     min-height: 54.2vh;
     display: flex;
     flex-direction: column;
@@ -109,10 +120,6 @@
 }
 
 .modal-text {
-  @media (width < 1024px) {
-    padding: 0 6px;
-  }
-
   h2 {
     @media (width >= 1024px) {
       font-size: 2.63vw;
@@ -131,4 +138,9 @@
       margin: 0;
     }
   }
+}
+
+.modal-form {
+  display: flex;
+  align-items: flex-end;
 }

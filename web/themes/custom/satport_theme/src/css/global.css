@@ -1,5 +1,6 @@
 :root {
   --color-space-gray: #3f4752;
+  --color-space-gray-light: #505968;
   --color-sky-blue: #63aeff;
   --color-sky-blue-light: #a9dbff;
   --color-dawn-yellow: #ffffa8;
@@ -146,8 +147,11 @@ button,
 
 /* Forms */
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
   max-width: 100%;
+  width: 100%;
   background: none;
   border-radius: 0;
   border: 1px solid #000;
@@ -157,16 +161,42 @@ input[type="password"] {
   font-size: 16px;
 }
 
+textarea {
+  max-width: 100%;
+  width: 100%;
+  background: none;
+  border-radius: 0;
+  border: 1px solid #000;
+  padding: 6px;
+}
+
+select {
+  background: none;
+  border-radius: 0;
+  border: 1px solid #000;
+  height: 36px;
+  font-size: 16px;
+}
+
 input[type="submit"] {
   border: 1px solid #000;
-  font-size: 14px;
+  font-size: 15px;
   height: 40px;
   padding: 0 30px;
   background: #fff;
   border-radius: 20px;
+  transition: none;
 
   &:hover {
-    background: var(--color-dawn-yellow);
+    color: #fff;
+    background: var(--color-space-gray);
+    border-color: var(--color-space-gray);
+  }
+
+  &:active {
+    color: #fff;
+    background: var(--color-space-gray-light);
+    border-color: var(--color-space-gray-light);
   }
 }
 

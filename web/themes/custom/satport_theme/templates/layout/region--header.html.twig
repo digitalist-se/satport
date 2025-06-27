@@ -22,9 +22,9 @@
   {{ content }}
 
   {# Hide contact us functionality temporarily #}
-  {#<div class="contact-wrapper">
+  <div class="contact-wrapper">
     <a href="#" data-toggle-contact-us class="button cta white">Contact us</a>
-  </div>#}
+  </div>
 
   <div class="mobile-menu-toggle-wrapper">
     <button id="mobile-menu-toggle" class="button reset mobile-menu-toggle">
@@ -49,30 +49,36 @@
         <ul id="mobile-menu" class="mobile-menu"></ul>
 
         {# Hide contact us functionality temporarily #}
-        {#<div class="mobile-menu-contact-wrapper">
+        <div class="mobile-menu-contact-wrapper">
           <a href="#" data-toggle-contact-us>Contact Us</a>
-        </div>#}
+        </div>
       </div>
     </div>
   </div>
 
   {# Hide contact us functionality temporarily #}
-  {#<div id="modal-contact-us" class="modal-fixed">
+  <div id="modal-contact-us" class="modal-fixed">
     <div class="modal-wrapper">
       <button data-close-contact-us class="button reset modal-close">
         <img src="/themes/custom/satport_theme/assets/icon-close.svg" alt="Icon Close" />
       </button>
 
       <div class="modal-content">
-        <div class="modal-logo-wrapper">
-          <img src="/themes/custom/satport_theme/assets/logo-infrastructure.svg" alt="SatPort infrastructure" />
-        </div>
+        <div class="modal-content-inner">
+          <div class="modal-logo-wrapper">
+            <img src="/themes/custom/satport_theme/assets/logo-infrastructure.svg" alt="SatPort infrastructure" />
+          </div>
 
-        <div class="modal-text">
-          {{ drupal_view('text_block', 'header_contact_us') }}
+          <div class="modal-text">
+            {{ drupal_view('text_block', 'header_contact_us') }}
+          </div>
         </div>
+      </div>
+
+      <div class="modal-form">
+        {{ drupal_view('webforms', 'contact_us') }}
       </div>
       
     </div>
-  </div>#}
+  </div>
 </div>
