@@ -15,3 +15,14 @@
 "https://{default}/":
     type: redirect
     to: "https://www.{default}/"
+
+
+# Redirect for the old base domain
+"https://satportinfrastructure.com/":
+  type: redirect
+  to: "https://www.{default}/"
+
+# Redirect for the old www domain
+"https://www.satportinfrastructure.com/":
+  type: redirect
+  to: "https://www.{default}/"
