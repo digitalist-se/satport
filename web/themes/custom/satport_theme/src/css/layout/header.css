@@ -1,13 +1,20 @@
 .page-header {
-  position: fixed;
   width: 100%;
-  top: 0;
-  left: 0;
   background: #fff;
   z-index: 4;
   @media (width >= 1024px) {
     background: none;
   }
+}
+
+.page-node-type-page .page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.user-logged-in.page-node-type-page .page-header {
+  position: static;
 }
 
 .page-header-topbar {
@@ -17,10 +24,6 @@
   @media (width >= 1024px) {
     display: none;
   }
-}
-
-.user-logged-in .page-header {
-  position: static;
 }
 
 .region-header {

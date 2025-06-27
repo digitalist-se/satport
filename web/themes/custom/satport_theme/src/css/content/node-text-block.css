@@ -1,0 +1,24 @@
+.node--type-text-block {
+  border: 1px solid #000;
+}
+
+.node--type-text-block .field--name-field-text-block-type,
+.node--type-text-block .field--name-field-text {
+  border-bottom: 1px solid #000;
+  display: flex;
+
+  &:last-child {
+    border: 0;
+  }
+
+  .field__label {
+    flex: 1;
+    padding: 12px 8px;
+    font-weight: 700;
+  }
+
+  .field__item {
+    flex: 2;
+    padding: 12px 8px;
+  }
+}

@@ -144,6 +144,45 @@ button,
   }
 }
 
+/* Forms */
+input[type="text"],
+input[type="password"] {
+  max-width: 100%;
+  background: none;
+  border-radius: 0;
+  border: 1px solid #000;
+  height: 36px;
+  padding: 0 6px;
+  font-family: var(--font-primary);
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  border: 1px solid #000;
+  font-size: 14px;
+  height: 40px;
+  padding: 0 30px;
+  background: #fff;
+  border-radius: 20px;
+
+  &:hover {
+    background: var(--color-dawn-yellow);
+  }
+}
+
+.form-item {
+  margin-bottom: 8px;
+}
+
+.form-item label {
+  display: block;
+  width: 100%;
+}
+
+.form-actions {
+  margin-top: 20px;
+}
+
 .container {
   padding: 0 14px;
   @media (width >= 1024px) {
