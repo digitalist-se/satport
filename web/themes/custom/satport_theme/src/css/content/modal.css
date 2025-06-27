@@ -140,4 +140,10 @@
 .modal-form {
   display: flex;
   align-items: flex-end;
+  @media (width >= 1024px) {
+    margin: 2rem 7.5vw 2rem 2rem;
+  }
+  @media (width >= 1356px) {
+    margin: 2rem 6.3rem 2rem 2rem;
+  }
 }

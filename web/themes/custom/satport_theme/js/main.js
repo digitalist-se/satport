@@ -263,6 +263,42 @@
         }
       });
       onScroll(window.scrollY);
+
+      //
+      //  Webform items
+      //
+      function handleWebformItems() {
+        const formItems = document.querySelectorAll(
+          ".webform-submission-form .form-text, .webform-submission-form .form-email, .webform-submission-form .form-tel"
+        );
+        formItems.forEach(function (formItem) {
+          function checkValue(el) {
+            if (el.value.length > 0 && el.parentElement) {
+              el.parentElement.classList.add("has-value");
+            } else {
+              el.parentElement.classList.remove("has-value");
+            }
+          }
+
+          // On Focus
+          formItem.addEventListener("focus", function (e) {
+            this.parentElement.classList.add("is-focused");
+          });
+
+          // On Blur
+          formItem.addEventListener("blur", function (e) {
+            this.parentElement.classList.remove("is-focused");
+          });
+
+          // On Input
+          formItem.addEventListener("input", function (e) {
+            checkValue(e.target);
+          });
+
+          checkValue(formItem);
+        });
+      }
+      handleWebformItems();
     },
   };
 })(jQuery, Drupal, once);

@@ -150,7 +150,7 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="tel"] {
-  max-width: 100%;
+  max-width: 410px;
   width: 100%;
   background: none;
   border-radius: 0;
@@ -162,12 +162,14 @@ input[type="tel"] {
 }
 
 textarea {
-  max-width: 100%;
+  max-width: 410px;
   width: 100%;
   background: none;
   border-radius: 0;
   border: 1px solid #000;
   padding: 6px;
+  font-family: var(--font-primary);
+  font-size: 16px;
 }
 
 select {
@@ -176,6 +178,8 @@ select {
   border: 1px solid #000;
   height: 36px;
   font-size: 16px;
+  max-width: 410px;
+  cursor: pointer;
 }
 
 input[type="submit"] {

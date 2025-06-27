@@ -13,20 +13,26 @@ title: 'Contact us'
 description: ''
 categories: {  }
 elements: |-
-  first_name:
-    '#type': textfield
-    '#title': 'First name'
-    '#required': true
-  last_name:
-    '#type': textfield
-    '#title': 'Last name'
-    '#required': true
-  company_name:
-    '#type': textfield
-    '#title': 'Company name'
-  job_title:
-    '#type': textfield
-    '#title': 'Job title'
+  flexbox:
+    '#type': webform_flexbox
+    first_name:
+      '#type': textfield
+      '#title': 'First name'
+      '#required': true
+    last_name:
+      '#type': textfield
+      '#title': 'Last name'
+      '#required': true
+  flexbox_01:
+    '#type': webform_flexbox
+    company_name:
+      '#type': textfield
+      '#title': 'Company name'
+      '#required': true
+    job_title:
+      '#type': textfield
+      '#title': 'Job title'
+      '#required': true
   work_email:
     '#type': email
     '#title': 'Work email'
@@ -34,6 +40,7 @@ elements: |-
   phone_number:
     '#type': tel
     '#title': 'Phone number'
+    '#required': true
   select_inquiry_type:
     '#type': select
     '#title': 'Inquiry type'
@@ -43,9 +50,11 @@ elements: |-
       'Partnerships & Growth': 'Partnerships & Growth'
       investors: 'Investor Relations'
     '#empty_option': 'Select inquiry type'
+    '#required': true
   message:
     '#type': textarea
     '#title': Message
+    '#required': true
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
