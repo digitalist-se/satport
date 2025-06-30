@@ -55,12 +55,14 @@
 
           modalContactUs.classList.add("open");
           document.documentElement.classList.add("scroll-lock");
+          document.documentElement.classList.add("contact-us-modal-open");
         });
       });
 
       function closeModal() {
         modalContactUs.classList.remove("open");
         document.documentElement.classList.remove("scroll-lock");
+        document.documentElement.classList.remove("contact-us-modal-open");
       }
 
       document.addEventListener("keydown", function (event) {

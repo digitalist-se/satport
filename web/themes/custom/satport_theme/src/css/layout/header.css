@@ -150,6 +150,7 @@
 
 #mobile-menu-fixed {
   position: fixed;
+  z-index: 2;
   top: 92px;
   left: 0;
   width: 100%;

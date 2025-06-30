@@ -101,3 +101,15 @@
     }
   }
 }
+
+/* reCAPTCHA badge */
+.grecaptcha-badge {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contact-us-modal-open .grecaptcha-badge {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 4;
+}

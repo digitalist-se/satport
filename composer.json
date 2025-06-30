@@ -26,6 +26,7 @@
     "drupal/metatag": "^2.1",
     "drupal/paragraphs": "^1.19",
     "drupal/pathauto": "^1.13",
+    "drupal/recaptcha_v3": "^2.0",
     "drupal/redis": "^1.9",
     "drupal/twig_tweak": "^3.4",
     "drupal/webform": "6.x-dev",

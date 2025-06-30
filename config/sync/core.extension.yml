@@ -4,6 +4,7 @@ module:
   admin_toolbar: 0
   block: 0
   breakpoint: 0
+  captcha: 0
   ckeditor5: 0
   crop: 0
   dblog: 0
@@ -30,6 +31,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  recaptcha_v3: 0
   responsive_image: 0
   sophron: 0
   system: 0
