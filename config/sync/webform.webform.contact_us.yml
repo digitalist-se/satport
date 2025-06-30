@@ -45,9 +45,6 @@ elements: |-
     '#required': true
     '#international': true
     '#international_initial_country': US
-    '#international_preferred_countries':
-      - GB
-      - US
     '#telephone_validation_format': '0'
   select_inquiry_type:
     '#type': select
