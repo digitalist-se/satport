@@ -59,24 +59,28 @@
   {# Hide contact us functionality temporarily #}
   <div id="modal-contact-us" class="modal-fixed">
     <div class="modal-wrapper">
+      <div class="modal-logo-wrapper">
+        <img src="/themes/custom/satport_theme/assets/logo-infrastructure.svg" alt="SatPort infrastructure" />
+      </div>
+
       <button data-close-contact-us class="button reset modal-close">
         <img src="/themes/custom/satport_theme/assets/icon-close.svg" alt="Icon Close" />
       </button>
 
-      <div class="modal-content">
-        <div class="modal-content-inner">
-          <div class="modal-logo-wrapper">
-            <img src="/themes/custom/satport_theme/assets/logo-infrastructure.svg" alt="SatPort infrastructure" />
+      <div id="modal-scroll-wrapper">
+        <div class="modal-container">
+          <div class="modal-content">
+            <div class="modal-content-inner">
+              <div class="modal-text">
+                {{ drupal_view('text_block', 'header_contact_us') }}
+              </div>
+            </div>
           </div>
 
-          <div class="modal-text">
-            {{ drupal_view('text_block', 'header_contact_us') }}
+          <div class="modal-form">
+            {{ drupal_view('webforms', 'contact_us') }}
           </div>
         </div>
-      </div>
-
-      <div class="modal-form">
-        {{ drupal_view('webforms', 'contact_us') }}
       </div>
       
     </div>

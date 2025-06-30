@@ -4,6 +4,9 @@
       const pageHeader = document.getElementById("page-header");
       const mainMenuFixed = document.getElementById("mobile-menu-fixed");
       const mainMenuScroll = document.getElementById("mobile-menu-scroll");
+      const modalScrollWrapper = document.getElementById(
+        "modal-scroll-wrapper"
+      );
       const mobileMenu = document.getElementById("mobile-menu");
       const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
       const heroSections = document.querySelectorAll(".paragraph--type--hero");
@@ -154,6 +157,13 @@
         // Set Mobile menu container to fixed height to enable scrolling when necessary.
         mainMenuScroll.style.height =
           window.innerHeight - pageHeader.clientHeight + "px";
+
+        if (window.innerWidth >= 1024) {
+          modalScrollWrapper.style.height = "";
+        } else {
+          modalScrollWrapper.style.height =
+            window.innerHeight - pageHeader.clientHeight + "px";
+        }
 
         // Reset Mobile menu visibility when resized to desktop.
         if (window.innerWidth >= 1024) {

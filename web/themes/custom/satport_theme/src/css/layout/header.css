@@ -159,6 +159,7 @@
   pointer-events: none;
   transition: opacity 0.4s;
   overflow-y: scroll;
+  scrollbar-color: #999 transparent;
   @media (width >= 1024px) {
     display: none;
   }
@@ -172,6 +173,7 @@
 #mobile-menu-scroll {
   max-height: 100%;
   overflow-y: scroll;
+  scrollbar-color: #999 transparent;
 }
 
 .mobile-menu {

@@ -1,5 +1,9 @@
 .webform-submission-form {
   max-width: 410px;
+  margin-bottom: 2rem;
+  @media (width >= 1024px) {
+    margin: 0;
+  }
 
   input[type="text"],
   input[type="password"],
@@ -77,9 +81,23 @@
 
 .webform-submission-form .form-actions .form-submit {
   width: 100%;
-  max-width: 400px;
+  max-width: 410px;
 }
 
 .node--type-webform {
   max-width: 600px;
+}
+
+.webform-confirmation__message {
+  h2 {
+    @media (width >= 1024px) {
+      font-size: 38px;
+    }
+  }
+
+  p {
+    @media (width >= 1024px) {
+      font-size: 18px;
+    }
+  }
 }
