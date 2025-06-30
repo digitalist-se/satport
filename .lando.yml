@@ -6,6 +6,11 @@ config:
   webroot: web
   via: nginx
 services:
+  appserver:
+    overrides:
+      ports:
+        - "0.0.0.0::80"
+        - "0.0.0.0::443"
   rediscache:
     type: redis:7
   mailhog:

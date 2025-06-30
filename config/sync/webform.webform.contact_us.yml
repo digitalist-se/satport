@@ -65,7 +65,7 @@ elements: |-
     '#maxlength': 140
     '#required': true
     '#counter_type': character
-    '#counter_maximum': 140
+    '#counter_maximum': 280
   captcha:
     '#type': captcha
     '#captcha_type': recaptcha_v3/submit_contact_us

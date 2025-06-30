@@ -179,13 +179,21 @@ textarea {
 }
 
 select {
+  -webkit-appearance: none;
+  appearance: none;
   background: none;
+  background-image: url("/themes/custom/satport_theme/assets/icon-caret-down.svg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 11px;
   border-radius: 0;
   border: 1px solid #000;
   height: 36px;
   font-size: 16px;
   max-width: 410px;
   cursor: pointer;
+  color: #000;
   @media (width >= 1024px) {
     font-size: 14px;
   }
@@ -200,6 +208,7 @@ input[type="submit"] {
   border-radius: 20px;
   transition: none;
   color: #000;
+  font-weight: 400;
 
   &:hover {
     color: #fff;
