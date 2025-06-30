@@ -8,5 +8,13 @@ config:
 services:
   rediscache:
     type: redis:7
+  mailhog:
+    type: mailhog
+    portforward: true
+    hogfrom:
+      - appserver
+proxy:
+  mailhog:
+    - mail.satport.lndo.site
 env_file:
   - .lando.env
