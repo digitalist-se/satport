@@ -77,6 +77,31 @@
   .drupal-messages {
     padding: 0;
   }
+
+  /* Phone number field */
+  .form-item-phone-number {
+    > label {
+      position: static;
+      pointer-events: auto;
+    }
+
+    .iti {
+      width: 100%;
+    }
+
+    input[type="tel"] {
+      padding-top: 0;
+      padding-left: 50px;
+      width: 100%;
+    }
+  }
+}
+
+.form-item--error-message {
+  font-weight: 400;
+  font-size: 12px;
+  margin: 6px 0;
+  color: red;
 }
 
 .webform-submission-form .form-actions .form-submit {

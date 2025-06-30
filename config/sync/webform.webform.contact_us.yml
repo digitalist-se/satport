@@ -37,10 +37,18 @@ elements: |-
     '#type': email
     '#title': 'Work email'
     '#required': true
+    '#pattern': '^[^\s@]+@[^\s@]+\.[^\s@]+$'
+    '#pattern_error': 'Please enter a valid email address.'
   phone_number:
     '#type': tel
     '#title': 'Phone number'
     '#required': true
+    '#international': true
+    '#international_initial_country': SE
+    '#international_preferred_countries':
+      - FI
+      - SE
+    '#telephone_validation_format': '0'
   select_inquiry_type:
     '#type': select
     '#title': 'Inquiry type'
