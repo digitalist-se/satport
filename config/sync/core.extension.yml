@@ -6,6 +6,7 @@ module:
   breakpoint: 0
   captcha: 0
   ckeditor5: 0
+  config_ignore: 0
   crop: 0
   dblog: 0
   dynamic_page_cache: 0

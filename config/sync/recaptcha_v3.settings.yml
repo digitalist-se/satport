@@ -1,8 +1,8 @@
 _core:
   default_config_hash: 6xvuojdlZ8-8Q7yJyRldPaE0UK_YijOlDo6HvURmW_E
 langcode: en-gb
-site_key: 6Lf4gnIrAAAAAAD1JtiiiVGoXK3KLaNSrb3rcNnK
-secret_key: 6Lf4gnIrAAAAAHm7ZsKYMu9hi7D2Il6i9zITX4fB
+site_key: ''
+secret_key: ''
 hide_badge: false
 verify_hostname: true
 default_challenge: ''
