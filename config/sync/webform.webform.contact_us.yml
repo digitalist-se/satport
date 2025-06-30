@@ -62,7 +62,10 @@ elements: |-
   message:
     '#type': textarea
     '#title': Message
+    '#maxlength': 140
     '#required': true
+    '#counter_type': character
+    '#counter_maximum': 140
   captcha:
     '#type': captcha
     '#captcha_type': recaptcha_v3/submit_contact_us

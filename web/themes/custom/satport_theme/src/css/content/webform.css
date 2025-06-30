@@ -127,6 +127,11 @@
   }
 }
 
+.text-count-message {
+  color: #949494;
+  font-size: 12px;
+}
+
 /* reCAPTCHA badge */
 .grecaptcha-badge {
   opacity: 0;
