@@ -254,9 +254,9 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: didzis.avotins@gmail.com
+      to_mail: didzis.avotins@digitalistgroup.com
       to_options: {  }
-      bcc_mail: ''
+      bcc_mail: tove.hassler@grow.eu
       bcc_options: {  }
       cc_mail: ''
       cc_options: {  }
