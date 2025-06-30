@@ -1,6 +1,6 @@
 .webform-submission-form {
   max-width: 410px;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
   @media (width >= 1024px) {
     margin: 0;
   }
