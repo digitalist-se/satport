@@ -44,10 +44,10 @@ elements: |-
     '#title': 'Phone number'
     '#required': true
     '#international': true
-    '#international_initial_country': SE
+    '#international_initial_country': US
     '#international_preferred_countries':
-      - FI
-      - SE
+      - GB
+      - US
     '#telephone_validation_format': '0'
   select_inquiry_type:
     '#type': select
