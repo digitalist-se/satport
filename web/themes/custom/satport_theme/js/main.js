@@ -4,6 +4,9 @@
       const pageHeader = document.getElementById("page-header");
       const mainMenuFixed = document.getElementById("mobile-menu-fixed");
       const mainMenuScroll = document.getElementById("mobile-menu-scroll");
+      const modalScrollWrapper = document.getElementById(
+        "modal-scroll-wrapper"
+      );
       const mobileMenu = document.getElementById("mobile-menu");
       const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
       const heroSections = document.querySelectorAll(".paragraph--type--hero");
@@ -52,12 +55,14 @@
 
           modalContactUs.classList.add("open");
           document.documentElement.classList.add("scroll-lock");
+          document.documentElement.classList.add("contact-us-modal-open");
         });
       });
 
       function closeModal() {
         modalContactUs.classList.remove("open");
         document.documentElement.classList.remove("scroll-lock");
+        document.documentElement.classList.remove("contact-us-modal-open");
       }
 
       document.addEventListener("keydown", function (event) {
@@ -154,6 +159,13 @@
         // Set Mobile menu container to fixed height to enable scrolling when necessary.
         mainMenuScroll.style.height =
           window.innerHeight - pageHeader.clientHeight + "px";
+
+        if (window.innerWidth >= 1024) {
+          modalScrollWrapper.style.height = "";
+        } else {
+          modalScrollWrapper.style.height =
+            window.innerHeight - pageHeader.clientHeight + "px";
+        }
 
         // Reset Mobile menu visibility when resized to desktop.
         if (window.innerWidth >= 1024) {
@@ -263,6 +275,42 @@
         }
       });
       onScroll(window.scrollY);
+
+      //
+      //  Webform items
+      //
+      function handleWebformItems() {
+        const formItems = document.querySelectorAll(
+          ".webform-submission-form .form-text, .webform-submission-form .form-email, .webform-submission-form .form-tel"
+        );
+        formItems.forEach(function (formItem) {
+          function checkValue(el) {
+            if (el.value.length > 0 && el.parentElement) {
+              el.parentElement.classList.add("has-value");
+            } else {
+              el.parentElement.classList.remove("has-value");
+            }
+          }
+
+          // On Focus
+          formItem.addEventListener("focus", function (e) {
+            this.parentElement.classList.add("is-focused");
+          });
+
+          // On Blur
+          formItem.addEventListener("blur", function (e) {
+            this.parentElement.classList.remove("is-focused");
+          });
+
+          // On Input
+          formItem.addEventListener("input", function (e) {
+            checkValue(e.target);
+          });
+
+          checkValue(formItem);
+        });
+      }
+      handleWebformItems();
     },
   };
 })(jQuery, Drupal, once);

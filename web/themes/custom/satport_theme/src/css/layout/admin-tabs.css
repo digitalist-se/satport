@@ -1,8 +1,5 @@
 .block-block-satport-theme-primary-local-tasks {
-  @media (width >= 1024px) {
-    padding: 0 2vw;
-    margin-bottom: 12px;
-  }
+  margin-bottom: 12px;
 
   ul {
     list-style: none;
@@ -34,5 +31,12 @@
     &:hover {
       background: var(--color-dawn-yellow);
     }
+  }
+}
+
+.page-node-type-page .block-block-satport-theme-primary-local-tasks {
+  padding: 0 14px;
+  @media (width >= 1024px) {
+    padding: 0 2vw;
   }
 }

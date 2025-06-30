@@ -3,7 +3,7 @@ _core:
 langcode: en-gb
 uuid: cf8ffce2-9b57-4798-a036-ea8faaf9c2f9
 name: SatPort
-mail: admin@example.com
+mail: noreply@stage-y77w3ti-dg5d4fadyi72o.eu-5.platformsh.site
 slogan: ''
 page:
   403: ''

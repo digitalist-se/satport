@@ -6,7 +6,20 @@ config:
   webroot: web
   via: nginx
 services:
+  appserver:
+    overrides:
+      ports:
+        - "0.0.0.0::80"
+        - "0.0.0.0::443"
   rediscache:
     type: redis:7
+  mailhog:
+    type: mailhog
+    portforward: true
+    hogfrom:
+      - appserver
+proxy:
+  mailhog:
+    - mail.satport.lndo.site
 env_file:
   - .lando.env

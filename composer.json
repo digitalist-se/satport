@@ -17,6 +17,7 @@
   "require": {
     "composer/installers": "^2.0",
     "drupal/admin_toolbar": "^3.5",
+    "drupal/config_ignore": "^3.3",
     "drupal/core-composer-scaffold": "^11.0",
     "drupal/core-project-message": "^11.0",
     "drupal/core-recommended": "^11.0",
@@ -26,8 +27,11 @@
     "drupal/metatag": "^2.1",
     "drupal/paragraphs": "^1.19",
     "drupal/pathauto": "^1.13",
+    "drupal/recaptcha_v3": "^2.0",
     "drupal/redis": "^1.9",
+    "drupal/telephone_validation": "^2.5",
     "drupal/twig_tweak": "^3.4",
+    "drupal/webform": "6.x-dev",
     "drush/drush": "^13.6",
     "platformsh/config-reader": "^3.0"
   },

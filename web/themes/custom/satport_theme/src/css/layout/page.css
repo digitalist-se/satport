@@ -2,8 +2,24 @@
 }
 
 .page-main {
-  padding-top: 92px;
+  padding: 2rem 14px;
   @media (width >=1024px) {
-    padding: 0;
+    padding: 2rem 2vw 4rem;
   }
+}
+
+.page-node-type-page .page-main {
+  padding-top: 92px;
+  padding-left: 0;
+  padding-right: 0;
+  @media (width >=1024px) {
+    padding-top: 0;
+  }
+}
+
+.user-logged-in.page-node-type-page .page-main {
+  padding-top: 0;
+}
+
+.page-main-inner {
 }

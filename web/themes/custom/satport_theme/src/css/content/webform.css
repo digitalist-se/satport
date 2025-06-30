@@ -1,0 +1,145 @@
+.webform-submission-form {
+  max-width: 410px;
+  margin-bottom: 6rem;
+  @media (width >= 1024px) {
+    margin: 0;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"] {
+    border: 0;
+    border-bottom: 1px solid #000;
+    height: 48px;
+    padding: 10px 0px 0;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  select {
+    border: 0;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    padding: 0 16px 0 0;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  textarea {
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  label {
+    font-size: 14px;
+    transition: top 0.3s, font-size 0.3s;
+  }
+
+  .webform-flexbox {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .form-item {
+    margin-bottom: 12px;
+  }
+
+  .form-type-textfield,
+  .form-type-email,
+  .form-type-tel {
+    position: relative;
+
+    &.is-focused,
+    &.has-value {
+      label {
+        top: 0;
+        font-size: 12px;
+      }
+    }
+
+    label {
+      position: absolute;
+      top: 17px;
+      left: 0;
+      pointer-events: none;
+    }
+  }
+
+  .drupal-messages {
+    padding: 0;
+  }
+
+  /* Phone number field */
+  .form-item-phone-number {
+    > label {
+      position: static;
+      pointer-events: auto;
+    }
+
+    .iti {
+      width: 100%;
+    }
+
+    input[type="tel"] {
+      padding-top: 0;
+      padding-left: 50px;
+      width: 100%;
+    }
+  }
+}
+
+.form-item--error-message {
+  font-weight: 400;
+  font-size: 12px;
+  margin: 6px 0;
+  color: red;
+}
+
+.webform-submission-form .form-actions .form-submit {
+  width: 100%;
+  max-width: 410px;
+}
+
+.node--type-webform {
+  max-width: 600px;
+}
+
+.webform-confirmation__message {
+  h2 {
+    @media (width >= 1024px) {
+      font-size: 38px;
+    }
+  }
+
+  p {
+    @media (width >= 1024px) {
+      font-size: 18px;
+    }
+  }
+}
+
+.text-count-message {
+  color: #949494;
+  font-size: 12px;
+}
+
+/* reCAPTCHA badge */
+.grecaptcha-badge {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contact-us-modal-open .grecaptcha-badge {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 4;
+}

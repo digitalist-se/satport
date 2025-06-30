@@ -1,13 +1,20 @@
 .page-header {
-  position: fixed;
   width: 100%;
-  top: 0;
-  left: 0;
   background: #fff;
   z-index: 4;
   @media (width >= 1024px) {
     background: none;
   }
+}
+
+.page-node-type-page .page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.user-logged-in.page-node-type-page .page-header {
+  position: static;
 }
 
 .page-header-topbar {
@@ -17,10 +24,6 @@
   @media (width >= 1024px) {
     display: none;
   }
-}
-
-.user-logged-in .page-header {
-  position: static;
 }
 
 .region-header {
@@ -147,6 +150,7 @@
 
 #mobile-menu-fixed {
   position: fixed;
+  z-index: 2;
   top: 92px;
   left: 0;
   width: 100%;
@@ -156,6 +160,7 @@
   pointer-events: none;
   transition: opacity 0.4s;
   overflow-y: scroll;
+  scrollbar-color: #999 transparent;
   @media (width >= 1024px) {
     display: none;
   }
@@ -169,11 +174,12 @@
 #mobile-menu-scroll {
   max-height: 100%;
   overflow-y: scroll;
+  scrollbar-color: #999 transparent;
 }
 
 .mobile-menu {
   list-style: none;
-  padding: 50px 20px 14px;
+  padding: 50px 14px 14px;
   margin: 0;
 
   li {
