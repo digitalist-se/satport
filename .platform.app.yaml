@@ -145,6 +145,8 @@ variables:
         N_PREFIX: /app/.global
         ENV: platformsh
         SATPORT_THEME_PATH: web/themes/custom/satport_theme
+    php:
+        zlib.output_compression: 'On'
 
 # Outbound firewall rules for the application. More information: https://docs.platform.sh/create-apps/app-reference.html#firewall
 # firewall:
