@@ -5,3 +5,4 @@ ignored_config_entities:
   - imagemagick.settings
   - recaptcha_v3.settings
   - system.site
+  - webform.webform.contact_us
