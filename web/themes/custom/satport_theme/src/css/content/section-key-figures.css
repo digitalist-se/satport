@@ -55,4 +55,14 @@
       }
     }
   }
+
+  .kf-footer-text {
+    font-size: 1rem;
+    font-style: italic;
+    text-align: right;
+    margin: 2rem 0 0;
+    @media (width >= 1024px) {
+      margin-top: 3.5rem;
+    }
+  }
 }
