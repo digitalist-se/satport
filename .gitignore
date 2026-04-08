@@ -33,3 +33,6 @@ drush-backups
 /.editorconfig
 /.gitattributes
 .DS_Store
+
+# Playwright MCP browser data
+.playwright-mcp/
