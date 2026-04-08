@@ -61,5 +61,18 @@ upsun activity:log -p dg5d4fadyi72o <activity-id>
 upsun mount:download -p dg5d4fadyi72o -e main --mount web/sites/default/files --target ./files/
 ```
 
+## Email Config (config-ignored — must set directly on each environment)
+```bash
+# Check current From address
+upsun ssh -p dg5d4fadyi72o -e main -- 'cd web && ../vendor/bin/drush config:get system.site mail'
+
+# Set From address
+upsun ssh -p dg5d4fadyi72o -e main -- 'cd web && ../vendor/bin/drush config:set system.site mail noreply@satport.com -y && ../vendor/bin/drush cr'
+
+# Check webform recipient
+upsun ssh -p dg5d4fadyi72o -e main -- 'cd web && ../vendor/bin/drush config:get webform.webform.contact_us handlers.email.settings.to_mail'
+```
+**WARNING**: Webform handler ID is `email`, NOT `email_handler`. Wrong key crashes the site.
+
 ## Known Issue
 If `upsun` commands fail with "Could not determine the current project", you forgot the `-p dg5d4fadyi72o` flag.

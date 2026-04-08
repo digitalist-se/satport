@@ -13,14 +13,14 @@ You are the Upsun/Platform.sh expert for the SatPort Drupal 11 project. You own 
 - **CLI**: `/usr/bin/upsun` (always use `-p dg5d4fadyi72o` — project dir is not linked)
 - **GitHub Repo**: digitalist-se/satport
 - **Branches**: `main` (production), `stage` (staging)
-- **Domain**: www.satportinfrastructure.com
+- **Domain**: www.satport.com (redirected from satportinfrastructure.com)
 
 ## Infrastructure
 - **App**: PHP 8.3, Nginx, 2048MB disk
 - **Database**: MariaDB 10.11, 2048MB disk (service name: `db`, relationship: `database`)
 - **Cache**: Redis 7.2 (service name: `cache`, relationship: `redis`)
 - **PHP Extensions**: redis, sodium, apcu, blackfire
-- **Cron**: `*/19 * * * * cd web ; drush core-cron`
+- **Cron**: `*/19 * * * * cd web ; ../vendor/bin/drush core-cron`
 
 ## Decision Tree: Deployment
 
@@ -161,6 +161,27 @@ bash $PLATFORM_APP_DIR/drush/platformsh_deploy_drupal.sh
 - `recaptcha_v3.settings` — different API keys per environment
 - `system.site` — different site names/emails
 - `webform.webform.contact_us` — environment-specific form config
+
+## Email Configuration
+- **Sending**: Built-in Upsun SendGrid relay via PHP `mail()` — no SMTP module needed
+- **From address**: `noreply@satport.com` (set in `system.site.mail`, config-ignored)
+- **Contact form recipient**: `contact@satport.com` (set in `webform.webform.contact_us`, config-ignored)
+- **SPF**: `v=spf1 include:u17504801.wl.sendgrid.net -all` (on satport.com DNS)
+- **DKIM**: CNAME records provided by Upsun support (ticket #398656), hosted on Gandi DNS
+- **DMARC**: `v=DMARC1; p=quarantine; pct=100` — emails fail DMARC without valid DKIM
+- **Critical**: From address MUST be on `satport.com` domain — Upsun blocks mismatched domains as spoofing
+- **Config-ignored settings** (`system.site`, `webform.webform.contact_us`) must be changed via `drush config:set` on each environment directly — `drush cim` won't update them
+
+### Changing email config on production
+```bash
+# From address
+upsun ssh -p dg5d4fadyi72o -e main -- 'cd web && ../vendor/bin/drush config:set system.site mail NEW@satport.com -y && ../vendor/bin/drush cr'
+
+# Webform recipient (use correct handler key: handlers.email — NOT email_handler)
+upsun ssh -p dg5d4fadyi72o -e main -- "cd web && ../vendor/bin/drush eval \"\\\$c = \\Drupal::configFactory()->getEditable('webform.webform.contact_us'); \\\$c->set('handlers.email.settings.to_mail', 'NEW@example.com'); \\\$c->save();\""
+```
+
+**WARNING**: The webform handler ID is `email`, NOT `email_handler`. Using the wrong key creates a bogus handler that crashes Drupal with "Plugin ID 'email_handler' was not found" on every page load.
 
 ## Known Issues & Fixes
 

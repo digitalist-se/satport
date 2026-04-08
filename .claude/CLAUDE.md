@@ -6,7 +6,7 @@ SatPort is a Drupal 11 corporate website for satellite port infrastructure. Host
 
 - **Repo**: digitalist-se/satport (GitHub)
 - **Branches**: `main` (production), `stage` (staging)
-- **Domain**: satportinfrastructure.com (redirects to www.{default})
+- **Domain**: www.satport.com (satportinfrastructure.com redirects)
 - **Upsun Project ID**: `dg5d4fadyi72o` (region: eu-5, org: digitalist-opentech)
 
 ## Tech Stack
@@ -171,7 +171,7 @@ Deploy hook: `drush cache-rebuild && drush updatedb && drush config-import`
 - **PHP extensions**: redis, sodium, apcu, blackfire
 - **Mounts**: web/sites/default/files, tmp, private, .drush, drush-backups
 - **Routes**: www.{default} upstream, non-www redirects
-- **Cron**: `*/19 * * * * cd web ; drush core-cron`
+- **Cron**: `*/19 * * * * cd web ; ../vendor/bin/drush core-cron`
 
 ## Known Issues & Resolutions
 
@@ -192,6 +192,12 @@ Lando only sees files in the project directory. Copy files from /tmp to project 
 
 ### Upsun CLI "Could not determine the current project"
 Always use `-p dg5d4fadyi72o` flag. Project dir is not linked to Upsun CLI.
+
+### Email delivery issues
+- From address MUST be `@satport.com` — Upsun blocks mismatched domains as spoofing
+- `system.site` and `webform.webform.contact_us` are config-ignored — change via `drush config:set` on prod directly
+- DKIM CNAME records must be correctly configured on Gandi DNS (no trailing `.satport.com` in values)
+- Webform handler ID is `email` (NOT `email_handler`) — wrong key crashes entire site
 
 ## Important Files
 
