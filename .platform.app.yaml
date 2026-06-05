@@ -104,6 +104,8 @@ web:
                     allow: true
                 '^/sitemap\.xml$':
                     allow: true
+                '^/\.well-known/':
+                    allow: true
 
                 # Deny direct access to configuration files.
                 '^/sites/sites\.php$':
