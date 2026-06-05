@@ -106,6 +106,8 @@ web:
                     allow: true
                 '^/\.well-known/':
                     allow: true
+                    headers:
+                        Content-Type: 'application/json'
 
                 # Deny direct access to configuration files.
                 '^/sites/sites\.php$':
