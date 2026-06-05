@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "endpoint": {
+    "url": "https://enrollment.manage.microsoft.com/enrollmentserver/discovery.svc",
+    "type": "com.microsoft.intune.mam"
+  },
+  "organization": {
+    "tenantId": "1f67883f-1c79-4188-956c-039514f483ca"
+  }
+}
