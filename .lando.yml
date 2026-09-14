@@ -1,25 +1,46 @@
 name: satport
 recipe: drupal11
 config:
-  php: '8.3'
-  database: 'mariadb:10.6'
   webroot: web
+  php: '8.3'
   via: nginx
+  database: mariadb:10.11
+  composer_version: 2
+
 services:
   appserver:
-    overrides:
-      ports:
-        - "0.0.0.0::80"
-        - "0.0.0.0::443"
+    build:
+      - composer install --no-interaction
   rediscache:
-    type: redis:7
+    type: redis:7.2
+  node:
+    type: node:22
+    build:
+      - cd /app/web/themes/custom/satport_theme && npm install && npm run build
   mailhog:
     type: mailhog
     portforward: true
     hogfrom:
       - appserver
+
 proxy:
   mailhog:
     - mail.satport.lndo.site
+
 env_file:
   - .lando.env
+
+tooling:
+  npm:
+    service: node
+    dir: /app/web/themes/custom/satport_theme
+  theme-build:
+    description: Build satport_theme CSS (dist/ is gitignored)
+    service: node
+    dir: /app/web/themes/custom/satport_theme
+    cmd: npm install && npm run build
+  theme-watch:
+    description: Watch and rebuild satport_theme CSS
+    service: node
+    dir: /app/web/themes/custom/satport_theme
+    cmd: npm run dev
