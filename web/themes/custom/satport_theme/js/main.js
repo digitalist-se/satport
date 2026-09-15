@@ -140,36 +140,8 @@
       function initPageMenu() {
         if (!desktopMenu || !mobileMenu) return;
 
-        // Does this href point at the news listing itself (not an article)?
-        function isNewsListingLink(href) {
-          if (!href) return false;
-
-          let url;
-          try {
-            url = new URL(href, window.location.origin);
-          } catch (e) {
-            return false;
-          }
-
-          return (
-            url.origin === window.location.origin &&
-            /^\/news\/?$/.test(url.pathname)
-          );
-        }
-
         // Create Mobile Menu.
         mobileMenu.innerHTML = desktopMenu.innerHTML;
-
-        // region--header.html.twig already renders a static "Latest news" link
-        // below the mobile menu, so drop any /news entry cloned in from the
-        // page menu rather than showing it twice.
-        mobileMenu.querySelectorAll("a").forEach(function (link) {
-          if (!isNewsListingLink(link.getAttribute("href"))) return;
-
-          const item = link.closest("li");
-          (item || link).remove();
-        });
-
         const mobileMenuLinks = mobileMenu.querySelectorAll("a");
 
         // Init link click events.

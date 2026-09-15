@@ -25,6 +25,10 @@
     background-color: var(--color-earth-brown);
   }
 
+  &.earth_gray_light {
+    background-color: var(--color-earth-gray-light);
+  }
+
   &.over_lines {
     @media (width >= 1024px) {
       z-index: 2;
@@ -72,6 +76,33 @@
   .tt-title {
     @media (width >= 1024px) {
       margin: 0;
+    }
+
+    &:not(:last-child) {
+      @media (width >= 1024px) {
+        margin-bottom: 1.94vw;
+      }
+    }
+  }
+
+  .tt-links {
+    a {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.1em;
+      font-size: 16px;
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWFycm93LXJpZ2h0Ij48cGF0aCBkPSJNNSAxMmgxNCIvPjxwYXRoIGQ9Im0xMiA1IDcgNy03IDciLz48L3N2Zz4=);
+      background-repeat: no-repeat;
+      padding-left: 1.5em;
+      background-size: 1.25em 1.25em;
+      @media (width >= 1024px) {
+        font-size: 1.25vw;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 

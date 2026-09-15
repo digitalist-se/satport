@@ -71,6 +71,12 @@
           {% if content.field_title.0 %}
             <h2 class="tt-title item-section-title">{{ content.field_title.0 }}</h2>
           {% endif %}
+
+          {% if section_id == 'news' %}
+            <div class="tt-links">
+              <a href="/news">View all news</a>
+            </div>
+          {% endif %}
         </div>
       </div>
       <div class="tt-column-two">
