@@ -1,0 +1,19 @@
+uuid: 005c2572-c4b9-4645-864f-c5972a31a6c0
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dateline_location
+    - node.type.news_article
+id: node.news_article.field_dateline_location
+field_name: field_dateline_location
+entity_type: node
+bundle: news_article
+label: 'Dateline location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

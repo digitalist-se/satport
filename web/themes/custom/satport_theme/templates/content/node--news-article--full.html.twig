@@ -1,0 +1,31 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  {# {{ content.field_image }} #}
+  <div class="news-content">
+    <div class="location-and-date">
+      {% if content.field_dateline_location.0 %}
+        {{ content.field_dateline_location.0 }} &ndash;
+      {% endif %}
+      {{ node.createdtime|format_date('news_date') }}
+    </div>
+
+    <h1>{{ label }}</h1>
+
+    <div class="news-intro">
+      {{ content.field_intro.0 }}
+    </div>
+
+    <div class="news-body">
+      {{ content.body }}
+
+      {{ content.field_attachments }}
+    </div>
+  </div>
+</article>

@@ -26,6 +26,9 @@ settings:
     -
       value: earth_brown
       label: 'EARTH BROWN'
+    -
+      value: earth_gray_light
+      label: 'EARTH GRAY LIGHT'
   allowed_values_function: ''
 module: options
 locked: false

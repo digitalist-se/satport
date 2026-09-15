@@ -6,6 +6,7 @@
 @import "./layout/admin-tabs.css";
 @import "./layout/messages";
 @import "./content/node-page.css";
+@import "./content/node-news-article.css";
 @import "./content/desktop-menu.css";
 @import "./content/section-hero.css";
 @import "./content/section-title-and-text.css";

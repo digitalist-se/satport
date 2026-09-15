@@ -1,0 +1,29 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  <div class="news-teaser__container">
+    <div class="news-teaser__column-one">
+      <div class="news-teaser__content-wrapper">
+        <div class="item-tag">{{ node.createdtime|format_date('news_date') }}</div>
+        <h2 class="item-section-title news-teaser__title">
+          <a href="{{ url }}">{{ label }}</a>
+        </h2>
+        <div class="news-teaser__intro">
+          {{ content.field_intro }}
+        </div>
+        <a class="read-link" href="{{ url }}">Read more</a>
+      </div>
+    </div>
+    <div class="news-teaser__column-two">
+      <a href="{{ url }}">
+        {{ content.field_image.0 }}
+      </a>
+    </div>
+  </div>
+</div>
