@@ -43,11 +43,12 @@
   "config": {
     "allow-plugins": {
       "composer/installers": true,
+      "cweagans/composer-patches": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
       "drupal/core-composer-scaffold": true,
       "drupal/core-project-message": true,
       "phpstan/extension-installer": true,
-      "dealerdirect/phpcodesniffer-composer-installer": true,
-      "cweagans/composer-patches": true
+      "symfony/runtime": true
     },
     "sort-packages": true
   },
