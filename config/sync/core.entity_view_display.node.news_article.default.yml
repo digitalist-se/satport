@@ -4,12 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.news_article.body
+    - field.field.node.news_article.field_attachments
     - field.field.node.news_article.field_dateline_location
     - field.field.node.news_article.field_image
     - field.field.node.news_article.field_intro
     - image.style.image_w_1920_scale
     - node.type.news_article
   module:
+    - file
     - image
     - text
     - user
@@ -24,6 +26,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_attachments:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_dateline_location:
     type: string

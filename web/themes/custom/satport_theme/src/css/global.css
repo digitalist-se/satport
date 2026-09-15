@@ -285,3 +285,28 @@ h2.item-section-title {
     height: 5.6vw;
   }
 }
+
+/* Field attachments */
+.field--name-field-attachments {
+  .field__item {
+    span {
+      display: none;
+    }
+
+    span.file {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+
+      a {
+        display: inline-block;
+        padding-left: 24px;
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWZpbGUtZG93biI+PHBhdGggZD0iTTYgMjJhMiAyIDAgMCAxLTItMlY0YTIgMiAwIDAgMSAyLTJoOGEyLjQgMi40IDAgMCAxIDEuNzA0LjcwNmwzLjU4OCAzLjU4OEEyLjQgMi40IDAgMCAxIDIwIDh2MTJhMiAyIDAgMCAxLTIgMnoiLz48cGF0aCBkPSJNMTQgMnY1YTEgMSAwIDAgMCAxIDFoNSIvPjxwYXRoIGQ9Ik0xMiAxOHYtNiIvPjxwYXRoIGQ9Im05IDE1IDMgMyAzLTMiLz48L3N2Zz4=);
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+      }
+    }
+  }
+}

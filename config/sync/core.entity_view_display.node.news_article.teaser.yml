@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.news_article.body
+    - field.field.node.news_article.field_attachments
     - field.field.node.news_article.field_dateline_location
     - field.field.node.news_article.field_image
     - field.field.node.news_article.field_intro
@@ -58,4 +59,5 @@ content:
     weight: 0
     region: content
 hidden:
+  field_attachments: true
   langcode: true
