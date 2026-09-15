@@ -21,9 +21,15 @@
 <div{{ attributes.addClass(classes) }}>
   {{ content }}
 
-  {# Hide contact us functionality temporarily #}
-  <div class="contact-wrapper">
-    <a href="#" data-toggle-contact-us class="button cta white">Contact us</a>
+  <div class="desktop-header-links">
+    <ul>
+      <li>
+        <a class="link-news" href="/news">Latest news</a>
+      </li>
+      <li>
+        <a href="#" data-toggle-contact-us class="button cta white">Contact us</a>
+      </li>
+    </ul>
   </div>
 
   <div class="mobile-menu-toggle-wrapper">
@@ -48,15 +54,20 @@
         {# Contents (menu items) for this menu are rendered from field--node--field-page-menu.html.twig via js/main.js #}
         <ul id="mobile-menu" class="mobile-menu"></ul>
 
-        {# Hide contact us functionality temporarily #}
-        <div class="mobile-menu-contact-wrapper">
-          <a href="#" data-toggle-contact-us>Contact Us</a>
+        <div class="mobile-menu-links-wrapper">
+          <ul>
+            <li>
+              <a href="/news">Latest news</a>
+            </li>
+            <li>
+              <a href="#" data-toggle-contact-us>Contact Us</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 
-  {# Hide contact us functionality temporarily #}
   <div id="modal-contact-us" class="modal-fixed">
     <div class="modal-wrapper">
       <div class="modal-logo-wrapper">

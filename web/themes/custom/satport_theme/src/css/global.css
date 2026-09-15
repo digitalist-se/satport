@@ -129,7 +129,13 @@ button,
   text-decoration: none;
   background: #000;
   color: #fff;
-  padding: 8px 24px;
+  padding: 10px 24px;
+  text-decoration: none;
+  line-height: 1;
+
+  &:hover {
+    text-decoration: none;
+  }
 
   &.white {
     background: #fff;

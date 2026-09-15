@@ -1,6 +1,50 @@
 (function ($, Drupal, once) {
+  //
+  //  Webform items
+  //
+  function handleWebformItems(context) {
+    const formItems = once(
+      "satport-webform-item",
+      ".webform-submission-form .form-text, .webform-submission-form .form-email, .webform-submission-form .form-tel",
+      context
+    );
+
+    formItems.forEach(function (formItem) {
+      function checkValue(el) {
+        if (el.value.length > 0 && el.parentElement) {
+          el.parentElement.classList.add("has-value");
+        } else {
+          el.parentElement.classList.remove("has-value");
+        }
+      }
+
+      // On Focus
+      formItem.addEventListener("focus", function (e) {
+        this.parentElement.classList.add("is-focused");
+      });
+
+      // On Blur
+      formItem.addEventListener("blur", function (e) {
+        this.parentElement.classList.remove("is-focused");
+      });
+
+      // On Input
+      formItem.addEventListener("input", function (e) {
+        checkValue(e.target);
+      });
+
+      checkValue(formItem);
+    });
+  }
+
   Drupal.behaviors.satport_theme = {
     attach: function (context, settings) {
+      handleWebformItems(context);
+
+      if (!once("satport-theme", "html", context).length) {
+        return;
+      }
+
       const pageHeader = document.getElementById("page-header");
       const mainMenuFixed = document.getElementById("mobile-menu-fixed");
       const mainMenuScroll = document.getElementById("mobile-menu-scroll");
@@ -96,18 +140,50 @@
       function initPageMenu() {
         if (!desktopMenu || !mobileMenu) return;
 
+        // Does this href point at the news listing itself (not an article)?
+        function isNewsListingLink(href) {
+          if (!href) return false;
+
+          let url;
+          try {
+            url = new URL(href, window.location.origin);
+          } catch (e) {
+            return false;
+          }
+
+          return (
+            url.origin === window.location.origin &&
+            /^\/news\/?$/.test(url.pathname)
+          );
+        }
+
         // Create Mobile Menu.
         mobileMenu.innerHTML = desktopMenu.innerHTML;
+
+        // region--header.html.twig already renders a static "Latest news" link
+        // below the mobile menu, so drop any /news entry cloned in from the
+        // page menu rather than showing it twice.
+        mobileMenu.querySelectorAll("a").forEach(function (link) {
+          if (!isNewsListingLink(link.getAttribute("href"))) return;
+
+          const item = link.closest("li");
+          (item || link).remove();
+        });
+
         const mobileMenuLinks = mobileMenu.querySelectorAll("a");
 
         // Init link click events.
         function handleMenuLinkClick(e) {
-          e.preventDefault();
+          const href = this.getAttribute("href") || "";
 
-          const targetId = this.getAttribute("href").substring(1);
-          const target = document.getElementById(targetId);
+          // Only hijack in-page anchors. The field also accepts internal and
+          // external URLs, which must be left alone to navigate normally.
+          if (href.charAt(0) !== "#") return;
+
+          const target = document.getElementById(href.substring(1));
           if (!target) return;
 
+          e.preventDefault();
           closeMobileMenu();
 
           const headerOffset = window.innerWidth < 1024 ? 92 : 0;
@@ -135,6 +211,8 @@
         if (!desktopMenuSticky) return;
 
         const firstTag = document.querySelector(".section .item-tag");
+        if (!firstTag) return;
+
         const topOffset = firstTag.getBoundingClientRect().top + window.scrollY;
         desktopMenuSticky.style.paddingTop = topOffset + "px";
       }
@@ -276,41 +354,6 @@
       });
       onScroll(window.scrollY);
 
-      //
-      //  Webform items
-      //
-      function handleWebformItems() {
-        const formItems = document.querySelectorAll(
-          ".webform-submission-form .form-text, .webform-submission-form .form-email, .webform-submission-form .form-tel"
-        );
-        formItems.forEach(function (formItem) {
-          function checkValue(el) {
-            if (el.value.length > 0 && el.parentElement) {
-              el.parentElement.classList.add("has-value");
-            } else {
-              el.parentElement.classList.remove("has-value");
-            }
-          }
-
-          // On Focus
-          formItem.addEventListener("focus", function (e) {
-            this.parentElement.classList.add("is-focused");
-          });
-
-          // On Blur
-          formItem.addEventListener("blur", function (e) {
-            this.parentElement.classList.remove("is-focused");
-          });
-
-          // On Input
-          formItem.addEventListener("input", function (e) {
-            checkValue(e.target);
-          });
-
-          checkValue(formItem);
-        });
-      }
-      handleWebformItems();
     },
   };
 })(jQuery, Drupal, once);
