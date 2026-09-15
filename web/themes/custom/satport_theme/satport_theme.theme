@@ -1,12 +1,15 @@
 <?php
 
 function satport_theme_preprocess_html(&$variables) {
+  // Root-relative so the links resolve correctly on nested paths (e.g. /news/...).
+  $favicon_path = base_path() . \Drupal::theme()->getActiveTheme()->getPath() . '/favicon';
+
   //<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   $variables['#attached']['html_head'][] = [
     [
       '#tag' => 'link',
       '#attributes' => [
-        'href' => \Drupal::theme()->getActiveTheme()->getPath() . '/favicon/apple-touch-icon.png',
+        'href' => $favicon_path . '/apple-touch-icon.png',
         'rel' => 'apple-touch-icon',
         'sizes' => '180x180'
       ],
@@ -19,7 +22,7 @@ function satport_theme_preprocess_html(&$variables) {
     [
       '#tag' => 'link',
       '#attributes' => [
-        'href' => \Drupal::theme()->getActiveTheme()->getPath() . '/favicon/favicon-32x32.png',
+        'href' => $favicon_path . '/favicon-32x32.png',
         'rel' => 'icon',
         'sizes' => '32x32'
       ],
@@ -32,7 +35,7 @@ function satport_theme_preprocess_html(&$variables) {
     [
       '#tag' => 'link',
       '#attributes' => [
-        'href' => \Drupal::theme()->getActiveTheme()->getPath() . '/favicon/favicon-16x16.png',
+        'href' => $favicon_path . '/favicon-16x16.png',
         'rel' => 'icon',
         'sizes' => '16x16'
       ],
@@ -45,7 +48,7 @@ function satport_theme_preprocess_html(&$variables) {
     [
       '#tag' => 'link',
       '#attributes' => [
-        'href' => \Drupal::theme()->getActiveTheme()->getPath() . '/favicon/site.webmanifest',
+        'href' => $favicon_path . '/site.webmanifest',
         'rel' => 'manifest',
       ],
     ],

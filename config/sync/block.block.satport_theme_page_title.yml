@@ -1,0 +1,25 @@
+uuid: 31541401-1907-4f8f-9351-2c6afd73ee60
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - satport_theme
+id: satport_theme_page_title
+theme: satport_theme
+region: content
+weight: 1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /news
