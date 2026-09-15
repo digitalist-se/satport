@@ -11,6 +11,11 @@ console/
 # Ignore sensitive information
 /web/sites/*/settings.local.php
 
+# Ignore database dumps
+*.sql
+*.sql.gz
+*.sql.bz2
+
 # Ignore Drupal's file directory
 /web/sites/*/files/
 
