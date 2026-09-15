@@ -138,6 +138,7 @@
     text-decoration: none;
     display: inline-flex;
     align-items: center;
+    gap: 0.1em;
 
     &:hover {
       text-decoration: underline;
@@ -164,7 +165,8 @@
     }
 
     picture,
-    img {
+    img,
+    a {
       display: block;
       width: 100%;
     }
