@@ -80,6 +80,14 @@
   }
 }
 
+.path-news .block-block-satport-theme-content > .views-element-container > div > p {
+  padding: 0 14px 2rem;
+  margin: 0;
+  @media (width >= 1024px) {
+    padding: 0 2vw 4.16vw 18.2vw;
+  }
+}
+
 /* News article teaser */
 .node--type-news-article.node--view-mode-teaser {
   background: #fff;
