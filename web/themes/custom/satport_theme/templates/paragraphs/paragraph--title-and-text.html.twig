@@ -73,8 +73,8 @@
           {% endif %}
 
           {% if section_id == 'news' %}
-            <div class="tt-links">
-              <a href="/news">View all news</a>
+            <div class="tt-news">
+              {{ drupal_view('news', 'block_1') }}
             </div>
           {% endif %}
         </div>

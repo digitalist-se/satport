@@ -9,29 +9,23 @@ dependencies:
     - field.field.node.news_article.field_dateline_location
     - field.field.node.news_article.field_image
     - field.field.node.news_article.field_intro
+    - field.field.node.news_article.field_title_short
     - image.style.image_w_1920_scale
     - node.type.news_article
   module:
     - image
-    - text
     - user
 id: node.news_article.teaser
 targetEntityType: node
 bundle: news_article
 mode: teaser
 content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
   field_dateline_location:
     type: string
     label: hidden
     settings:
       link_to_entity: false
+      link_rel: canonical
     third_party_settings: {  }
     weight: 2
     region: content
@@ -59,5 +53,7 @@ content:
     weight: 0
     region: content
 hidden:
+  body: true
   field_attachments: true
+  field_title_short: true
   langcode: true
