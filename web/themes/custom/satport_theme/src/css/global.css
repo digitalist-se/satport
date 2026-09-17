@@ -270,6 +270,10 @@ h2.item-section-title {
   @media (width >= 1024px) {
     font-size: 3.3vw;
   }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 #drupal-live-announce {
