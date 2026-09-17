@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.news_article.field_dateline_location
     - field.field.node.news_article.field_image
     - field.field.node.news_article.field_intro
+    - field.field.node.news_article.field_title_short
     - image.style.image_w_1920_scale
     - node.type.news_article
   module:
@@ -60,6 +61,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_title_short:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 6
     region: content
   links:
     settings: {  }
