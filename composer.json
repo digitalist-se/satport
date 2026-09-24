@@ -31,7 +31,7 @@
     "drupal/redis": "^1.9",
     "drupal/telephone_validation": "^2.5",
     "drupal/twig_tweak": "^3.4",
-    "drupal/webform": "6.x-dev",
+    "drupal/webform": "^6.3.1",
     "drush/drush": "^13.6",
     "platformsh/config-reader": "^3.0"
   },

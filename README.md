@@ -27,6 +27,14 @@ lando drush cr
 
 After changing `.lando.yml`, run `lando rebuild -y`.
 
+## Email
+
+Locally, all outgoing mail (webform notifications, password resets and so on) is caught by
+MailHog and never delivered. Open https://mail.satport.lndo.site to read it. Submitting the
+Contact us form in the browser should show a message to `contact@satport.com` there.
+
+Real delivery only happens on Upsun.
+
 ## Useful commands
 
 | Command | Purpose |
